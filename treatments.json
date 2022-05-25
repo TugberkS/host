@@ -298,8 +298,8 @@
     },
     {
         "id": 18,
-        "name": "popup",
-        "description": "popup",
+        "name": "Exit popup",
+        "description": "Display exit popup",
         "split_weight": "100",
         "apply_on_user_segment": "*",
         "apply_on_url": "/",
@@ -314,7 +314,7 @@
             {
                 "type": "element_handler",
                 "operator": "popup",
-                "value": "<span style=\"margin: 70px auto; padding: 20px; background: #fff; border-radius: 5px; width: 30%; position: relative; display: block;\">Sepetinizdeki ürün hızlı tükeniyor!</span>",
+                "value": "<div style=\"margin: 70px auto; background: #fff; border-radius: 10px; width: 370px; position: relative; display: block;\">\n    <button style=\"position: absolute; right: 0px; top: 0px; margin: 5px;\">X</button>\n    <div style=\"display: flex; flex-direction: column; align-items: center\">\n      <img src=\"{{REPLACE}}\" width=\"90px\" style=\"width: 370px;height: auto;border-radius: 10px 10px 0px 0px;\">\n      <div style=\"display: flex; align-items: center; justify-content: center\">\n      <img src=\"https://www.kindpng.com/picc/m/788-7889478_alarm-clipart-hour-analog-clock-png-transparent-png.png\" width=\"90px\" style=\"width: 30px; height: 30px\">\n      Ürünlerin Tükeniyor\n      </div>\n      <div style=\"font-size: 28px; font-weight: 450; text-align: center\">\n        Acele et! Ürünlerin tükenmeden satın al\n      </div>\n      <div style=\"font-size: 18px; font-weight: 390; text-align: center\">\n        Sepetindeki ürünler hızlıca tükeniyor. Satın alma işleminizde ücretsiz gönderim.\n      </div>\n    </div>\n  </div>",
                 "skipRule": "random",
                 "applyEvent": "mouseleave",
                 "contentSelector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > div > div.basket_product_list > ul > li > a > div.product_image > img"
