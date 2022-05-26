@@ -12,14 +12,12 @@
             "condition": "greaterThan",
             "value": 10,
             "chain_condition": "and",
-            "chain": [
-                {
-                    "type": "counter",
-                    "operator": "pageView",
-                    "condition": "greaterEquals",
-                    "value": 2
-                }
-            ]
+            "chain": {
+                "type": "counter",
+                "operator": "pageView",
+                "condition": "greaterEquals",
+                "value": 2
+            }
         },
         "subVariantRuleSet": [
             {
