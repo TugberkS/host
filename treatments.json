@@ -1,48 +1,50 @@
-{
-    "id": 1,
-    "description": "Display exit popup",
-    "apply_on_user_segment": "*",
-    "apply_on_url": "/",
-    "device": "desktop",
-    "ruleSet": {
+[
+    {
         "id": 1,
-        "type": "session",
-        "operator": "duration",
-        "condition": "greaterThan",
-        "value": 10,
-        "chain_condition": "and",
-        "chain": [
-            {
-                "type": "counter",
-                "operator": "pageView",
-                "condition": "greaterEquals",
-                "value": 2
-            }
-        ]
-    },
-    "subVariantRuleSet": [
-        {
+        "description": "Display exit popup",
+        "apply_on_user_segment": "*",
+        "apply_on_url": "/",
+        "device": "desktop",
+        "ruleSet": {
             "id": 1,
-            "type": "element",
-            "operator": null,
-            "condition": "exist",
-            "selector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > a > span.basket_length",
-            "subVariantId": 1
-        }
-    ],
-    "actions": [
-        {
-            "operator": "insert",
-            "type": "popup",
-            "applyEvent": "exitIntent",
-            "contentSelector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > div > div.basket_product_list > ul > li > a > div.product_image > img",
-            "value": "<div>Empty Popup</div>",
-            "subVariants": [
+            "type": "session",
+            "operator": "duration",
+            "condition": "greaterThan",
+            "value": 10,
+            "chain_condition": "and",
+            "chain": [
                 {
-                    "id": 1,
-                    "value": "<div style=\"margin: 70px auto; background: #fff; border-radius: 10px; width: 370px; position: relative; display: block;\"><button style=\"position: absolute; right: 0px; top: 0px; margin: 5px;\">X</button><div style=\"display: flex; flex-direction: column; align-items: center\"><img src=\"{{REPLACE}}\" style=\"width: 370px;height: auto;border-radius: 10px 10px 0px 0px; margin-bottom: 30px;\"><div style=\"display: flex; align-items: center; justify-content: center\"><img src=\"https://ndvivense.glov.ai/assets/selling_out.png\" width=\"90px\" style=\"width: 30px; height: 30px\">Ürünlerin Tükeniyor</div><div style=\"font-size: 28px; font-weight: 450; text-align: center; margin-bottom: 12px;\">Acele et! Ürünlerin tükenmeden satın al</div><div style=\"font-size: 18px; font-weight: 390; text-align: center; margin-bottom: 12px;\">Sepetindeki ürünler hızlıca tükeniyor. Satın alma işleminizde ücretsiz gönderim.</div><a class=\"adora-cta_btn\" href=\"siparis-listesi.html\">SEPETE GIT</a></div></div>"
+                    "type": "counter",
+                    "operator": "pageView",
+                    "condition": "greaterEquals",
+                    "value": 2
                 }
             ]
-        }
-    ]
-}
+        },
+        "subVariantRuleSet": [
+            {
+                "id": 1,
+                "type": "element",
+                "operator": null,
+                "condition": "exist",
+                "selector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > a > span.basket_length",
+                "subVariantId": 1
+            }
+        ],
+        "actions": [
+            {
+                "operator": "insert",
+                "type": "popup",
+                "applyEvent": "exitIntent",
+                "contentSelector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > div > div.basket_product_list > ul > li > a > div.product_image > img",
+                "value": "<div>Empty Popup</div>",
+                "subVariants": [
+                    {
+                        "id": 1,
+                        "value": "<div style=\"margin: 70px auto; background: #fff; border-radius: 10px; width: 370px; position: relative; display: block;\"><button style=\"position: absolute; right: 0px; top: 0px; margin: 5px;\">X</button><div style=\"display: flex; flex-direction: column; align-items: center\"><img src=\"{{REPLACE}}\" style=\"width: 370px;height: auto;border-radius: 10px 10px 0px 0px; margin-bottom: 30px;\"><div style=\"display: flex; align-items: center; justify-content: center\"><img src=\"https://ndvivense.glov.ai/assets/selling_out.png\" width=\"90px\" style=\"width: 30px; height: 30px\">Ürünlerin Tükeniyor</div><div style=\"font-size: 28px; font-weight: 450; text-align: center; margin-bottom: 12px;\">Acele et! Ürünlerin tükenmeden satın al</div><div style=\"font-size: 18px; font-weight: 390; text-align: center; margin-bottom: 12px;\">Sepetindeki ürünler hızlıca tükeniyor. Satın alma işleminizde ücretsiz gönderim.</div><a class=\"adora-cta_btn\" href=\"siparis-listesi.html\">SEPETE GIT</a></div></div>"
+                    }
+                ]
+            }
+        ]
+    }
+]
