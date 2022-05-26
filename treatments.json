@@ -1,349 +1,48 @@
-[
-    {
+{
+    "id": 1,
+    "description": "Display exit popup",
+    "apply_on_user_segment": "*",
+    "apply_on_url": "/",
+    "device": "desktop",
+    "ruleSet": {
         "id": 1,
-        "name": "badge change",
-        "description": "change the badge with a heart image",
-        "split_weight": "100",
-        "apply_on_user_segment": "A",
-        "apply_on_url": "/oturma-odasi-mobilyalari.html",
-        "apply_on_selector": "div.product-link > div > a > div > div.top-left-badge > div > img",
-        "apply_on_action":
-        [
+        "type": "session",
+        "operator": "duration",
+        "condition": "greaterThan",
+        "value": 10,
+        "chain_condition": "and",
+        "chain": [
             {
-                "type": "element_handler",
-                "operator": "setattribute",
-                "attribute": "src",
-                "value": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Red_heart_tw.svg/292px-Red_heart_tw.svg.png"
+                "type": "counter",
+                "operator": "pageView",
+                "condition": "greaterEquals",
+                "value": 2
             }
         ]
     },
-    {
-        "id": 2,
-        "name": "badge change",
-        "description": "change the badge with a heart image",
-        "split_weight": "100",
-        "apply_on_user_segment": "B",
-        "apply_on_url": "/oturma-odasi-mobilyalari.html",
-        "apply_on_selector": "div.product-link > div > a > div > div.top-left-badge > div > img",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "setattribute",
-                "attribute": "src",
-                "value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyWTOgbZhvemSpnP5op16Bd9axuoRsH2Eiuw&usqp=CAU"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "name": "move 2 divs",
-        "description": "replace divs contents",
-        "split_weight": "100",
-        "apply_on_user_segment": "A",
-        "apply_on_url": "/",
-        "apply_on_selector": "div.vvs-snippet-hero-products__items",
-        "apply_on_action":
-        [
-            {
-                "type": "move",
-                "operator": "swap",
-                "move_selector_2": ".vvs-snippet-hero-products__items > div:nth-child(2)",
-                "move_selector_1": ".vvs-snippet-hero-products__items > div:first-child"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "name": "move 2 divs",
-        "description": "replace divs contents",
-        "split_weight": "100",
-        "apply_on_user_segment": "B",
-        "apply_on_url": "/",
-        "apply_on_selector": "div.vvs-snippet-hero-products__items",
-        "apply_on_action":
-        [
-            {
-                "type": "move",
-                "operator": "swap",
-                "move_selector_2": ".vvs-snippet-hero-products__items > div:nth-child(3)",
-                "move_selector_1": ".vvs-snippet-hero-products__items > div:first-child"
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "name": "remove element",
-        "description": "remove an element",
-        "split_weight": "100",
-        "apply_on_user_segment": "A",
-        "apply_on_url": "/",
-        "apply_on_selector": ".signup_icon",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "remove"
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "name": "remove element",
-        "description": "remove an element",
-        "split_weight": "100",
-        "apply_on_user_segment": "B",
-        "apply_on_url": "/",
-        "apply_on_selector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.my_favorites_wrapper.my-favorites > a > span.shortcut_icon.heart_icon",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "remove"
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "name": "inject script",
-        "description": "inject a script",
-        "split_weight": "100",
-        "apply_on_user_segment": "A",
-        "apply_on_url": "/",
-        "apply_on_selector": "body",
-        "apply_on_action":
-        [
-            {
-                "type": "injectscript",
-                "operator": "injectscript",
-                "value": "console.log('GLOV DEBUG: script injected for segment A');"
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "name": "inject script",
-        "description": "inject a script",
-        "split_weight": "100",
-        "apply_on_user_segment": "B",
-        "apply_on_url": "/",
-        "apply_on_selector": "body",
-        "apply_on_action":
-        [
-            {
-                "type": "injectscript",
-                "operator": "injectscript",
-                "value": "console.log('GLOV DEBUG: script injected for segment B');"
-            }
-        ]
-    },
-    {
-        "id": 9,
-        "name": "color change",
-        "description": "change color of cta button",
-        "split_weight": "100",
-        "apply_on_user_segment": "A",
-        "apply_on_url": "/valens-yemek-odasi-takimi-modeli.html",
-        "apply_on_selector": "div.panel.panel-default.product-right-sidebar > div > div.button-add-cart-action > a",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "setattribute",
-                "attribute": "style",
-                "value": "background-color: #FFB500"
-            }
-        ]
-    },
-    {
-        "id": 10,
-        "name": "color change",
-        "description": "change color of cta button",
-        "split_weight": "100",
-        "apply_on_user_segment": "B",
-        "apply_on_url": "/valens-yemek-odasi-takimi-modeli.html",
-        "apply_on_selector": "div.panel.panel-default.product-right-sidebar > div > div.button-add-cart-action > a",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "setattribute",
-                "attribute": "style",
-                "value": "background-color: red"
-            }
-        ]
-    },
-    {
-        "id": 11,
-        "name": "add urgency label",
-        "description": "add urgency label for discount",
-        "split_weight": "100",
-        "apply_on_user_segment": "A",
-        "apply_on_url": "/",
-        "apply_on_selector": "body > div.main-custom-container > div > div > div.vvs-snippet.vvs-snippet-hero-products > div.vvs-snippet-hero-products__items > div:nth-child(4)",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "before",
-                "value": "<div style='width: 72px; border: red; border-radius: 12%; top: 2rem; right: 20rem; background-color: red; color: white; font-size: 15px; position: absolute;'>2 days left</div>"
-            }
-        ]
-    },
-    {
-        "id": 12,
-        "name": "add urgency label",
-        "description": "add urgency label for discount",
-        "split_weight": "100",
-        "apply_on_user_segment": "B",
-        "apply_on_url": "/",
-        "apply_on_selector": "body > div.main-custom-container > div > div > div.vvs-snippet.vvs-snippet-hero-products > div.vvs-snippet-hero-products__items > div:nth-child(4)",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "before",
-                "value": "<div style='width: 72px; border: #FFB500; border-radius: 12%; top: 2rem; right: 20rem; background-color: #FFB500; color: black; font-size: 15px; position: absolute;'>2 days left</div>"
-            }
-        ]
-    },
-    {
-        "id": 13,
-        "name": "remove element skip every fourth",
-        "description": "remove an element",
-        "split_weight": "100",
-        "apply_on_user_segment": "A",
-        "apply_on_url": "/haftanin-cok-satanlari.html",
-        "apply_on_selector": "div.super-price-badge",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "remove",
-                "skipRule": "every-fourth"
-            }
-        ]
-    },
-    {
-        "id": 14,
-        "name": "remove element skip randomly",
-        "description": "remove an element",
-        "split_weight": "100",
-        "apply_on_user_segment": "B",
-        "apply_on_url": "/haftanin-cok-satanlari.html",
-        "apply_on_selector": "div.super-price-badge",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "remove",
-                "skipRule": "random"
-            }
-        ]
-    },
-    {
-        "id": 15,
-        "name": "TEST color change",
-        "description": "TEST change color of text",
-        "split_weight": "100",
-        "apply_on_user_segment": "A",
-        "apply_on_url": "/",
-        "apply_on_selector": "body > section > div.call-to-action > h1",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "setattribute",
-                "attribute": "style",
-                "value": "color: red"
-            }
-        ]
-    },
-    {
-        "id": 16,
-        "name": "TEST color change",
-        "description": "TEST change color of text",
-        "split_weight": "100",
-        "apply_on_user_segment": "B",
-        "apply_on_url": "/",
-        "apply_on_selector": "body > section > div.call-to-action > h1",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "setattribute",
-                "attribute": "style",
-                "value": "color: red"
-            }
-        ]
-    },
-    {
-        "id": 17,
-        "name": "popup",
-        "description": "popup",
-        "split_weight": "100",
-        "apply_on_user_segment": "*",
-        "apply_on_url": "/",
-        "apply_on_selector": "body",
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "popup",
-                "value": "<span style=\"margin: 70px auto; padding: 20px; background: #fff; border-radius: 5px; width: 30%; position: relative; display: block;\">A Simple Popup for Testing Purpose!</span>",
-                "skipRule": "random",
-                "timeout": 2500
-            }
-        ]
-    },
-    {
-        "id": 18,
-        "name": "Exit popup",
-        "description": "Display exit popup",
-        "split_weight": "100",
-        "apply_on_user_segment": "*",
-        "apply_on_url": "/",
-        "apply_on_selector": "body",
-        "rule": 
+    "subVariantRuleSet": [
         {
+            "id": 1,
+            "type": "element",
+            "operator": null,
+            "condition": "exist",
             "selector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > a > span.basket_length",
-            "operator": "exists"
-        },
-        "apply_on_action":
-        [
-            {
-                "type": "element_handler",
-                "operator": "popup",
-                "value": "<div style=\"margin: 70px auto; background: #fff; border-radius: 10px; width: 370px; position: relative; display: block;\"><button style=\"position: absolute; right: 0px; top: 0px; margin: 5px;\">X</button><div style=\"display: flex; flex-direction: column; align-items: center\"><img src=\"{{REPLACE}}\" style=\"width: 370px;height: auto;border-radius: 10px 10px 0px 0px; margin-bottom: 30px;\"><div style=\"display: flex; align-items: center; justify-content: center\"><img src=\"https://www.kindpng.com/picc/m/788-7889478_alarm-clipart-hour-analog-clock-png-transparent-png.png\" width=\"90px\" style=\"width: 30px; height: 30px\">Ürünlerin Tükeniyor</div><div style=\"font-size: 28px; font-weight: 450; text-align: center; margin-bottom: 12px;\">Acele et! Ürünlerin tükenmeden satın al</div><div style=\"font-size: 18px; font-weight: 390; text-align: center; margin-bottom: 12px;\">Sepetindeki ürünler hızlıca tükeniyor. Satın alma işleminizde ücretsiz gönderim.</div><a class=\"adora-cta_btn\" href=\"siparis-listesi.html\">SEPETE GIT</a></div></div>",
-                "skipRule": "random",
-                "applyEvent": "mouseleave",
-                "contentSelector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > div > div.basket_product_list > ul > li > a > div.product_image > img",
-                "mdCondition": "(min-width: 440px)"
-            }
-        ]
-    },
-    {
-        "id": 19,
-        "name": "mobile layout change",
-        "description": "change mobile layout into 1 column",
-        "split_weight": "100",
-        "apply_on_user_segment": "*",
-        "apply_on_url": "/yatak-odasi.html",
-        "apply_on_selector": "body",
-        "apply_on_action":
-        [{
-            "type": "element_handler",
-            "operator": "styleApplicator",
-            "value": "{\"margin-top\":\"10rem\"}",
-            "contentSelector": "div.product_info",
-            "mdCondition": "(max-width: 440px)"
-        },
+            "subVariantId": 1
+        }
+    ],
+    "actions": [
         {
-            "type": "element_handler",
-            "operator": "styleApplicator",
-            "value": "{\"width\":\"100%\"}",
-            "contentSelector": "#product-list-wrapper > div.product-list_container > div > div",
-            "mdCondition": "(max-width: 440px)"
-        }]
-    }
-]
+            "operator": "insert",
+            "type": "popup",
+            "applyEvent": "exitIntent",
+            "contentSelector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > div > div.basket_product_list > ul > li > a > div.product_image > img",
+            "value": "<div>Empty Popup</div>",
+            "subVariants": [
+                {
+                    "id": 1,
+                    "value": "<div style=\"margin: 70px auto; background: #fff; border-radius: 10px; width: 370px; position: relative; display: block;\"><button style=\"position: absolute; right: 0px; top: 0px; margin: 5px;\">X</button><div style=\"display: flex; flex-direction: column; align-items: center\"><img src=\"{{REPLACE}}\" style=\"width: 370px;height: auto;border-radius: 10px 10px 0px 0px; margin-bottom: 30px;\"><div style=\"display: flex; align-items: center; justify-content: center\"><img src=\"https://ndvivense.glov.ai/assets/selling_out.png\" width=\"90px\" style=\"width: 30px; height: 30px\">Ürünlerin Tükeniyor</div><div style=\"font-size: 28px; font-weight: 450; text-align: center; margin-bottom: 12px;\">Acele et! Ürünlerin tükenmeden satın al</div><div style=\"font-size: 18px; font-weight: 390; text-align: center; margin-bottom: 12px;\">Sepetindeki ürünler hızlıca tükeniyor. Satın alma işleminizde ücretsiz gönderim.</div><a class=\"adora-cta_btn\" href=\"siparis-listesi.html\">SEPETE GIT</a></div></div>"
+                }
+            ]
+        }
+    ]
+}
