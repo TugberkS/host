@@ -5,20 +5,22 @@
         "apply_on_user_segment": "*",
         "apply_on_url": "/",
         "device": "desktop",
-        "ruleSet": {
-            "id": 1,
-            "type": "session",
-            "operator": "duration",
-            "condition": "greaterThan",
-            "value": 10,
-            "chain_condition": "and",
-            "chain": {
+        "baseRuleSet": [
+            {
+                "id": 1,
+                "type": "session",
+                "operator": "duration",
+                "condition": "greaterThan",
+                "value": 10
+            },
+            {
+                "id": 2,
                 "type": "counter",
                 "operator": "pageView",
                 "condition": "greaterEquals",
                 "value": 2
             }
-        },
+        ],
         "subVariantRuleSet": [
             {
                 "id": 1,
