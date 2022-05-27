@@ -68,7 +68,7 @@
         "actions": [
             {
                 "operator": "styleApplicator",
-                "value": "{\"margin-top\":\"10rem\"}",
+                "value": "{\"margin-top\":\"13rem\"}",
                 "contentSelector": "div.product_info"
             },
             {
