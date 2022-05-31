@@ -43,7 +43,7 @@
             {
                 "operator": "insert",
                 "type": "popup",
-                "applyEvent": "exitIntent",
+                "applyEvent": ["exitIntent", "copyIntent"],
                 "contentSelector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > div > div.basket_product_list > ul > li > a > div.product_image > img",
                 "value": "<div>Empty Popup</div>",
                 "subVariants": [
@@ -67,14 +67,91 @@
         "device": "mobile",
         "actions": [
             {
-                "operator": "styleApplicator",
+                "operator": "edit",
+                "type": "styleApplicator",
                 "value": "{\"margin-top\":\"13rem\"}",
-                "contentSelector": "div.product_info"
+                "selector": "div.product_info"
             },
             {
-                "operator": "styleApplicator",
+                "operator": "edit",
+                "type": "styleApplicator",
                 "value": "{\"width\":\"100%\"}",
-                "contentSelector": "#product-list-wrapper > div.product-list_container > div > div"
+                "selector": "#product-list-wrapper > div.product-list_container > div > div"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "description": "Sales Motivator (Coupon) - Basket",
+        "apply_on_user_segment": "*",
+        "apply_on_url": "/siparis-listesi.html",
+        "device": "*",
+        "subVariantRuleSet": [
+            {
+                "id": 1,
+                "type": "element",
+                "operator": "textNumber",
+                "condition": "lessThan",
+                "value": 1500,
+                "selectorAll": ".price",
+                "subVariantId": 1
+            },
+            {
+                "id": 2,
+                "type": "element",
+                "operator": "textNumber",
+                "condition": "between",
+                "value": "1500, 3000",
+                "selectorAll": ".price",
+                "subVariantId": 2
+            },
+            {
+                "id": 3,
+                "type": "element",
+                "operator": "textNumber",
+                "condition": "between",
+                "value": "3000, 6000",
+                "selectorAll": ".price",
+                "subVariantId": 3
+            },
+            {
+                "id": 4,
+                "type": "element",
+                "operator": "textNumber",
+                "condition": "greaterThan",
+                "value": 6000,
+                "selectorAll": ".price",
+                "subVariantId": 4
+            }
+        ],
+        "actions": [
+            {
+                "operator": "remove",
+                "selector": "basket_top_warning-wrapper"
+            },
+            {
+                "operator": "insert",
+                "type": "after",
+                "selector": "#checkoutForm > div > div > div.col-sm-12.basket_product_list_header.reserved-product",
+                "value": "3.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim Kupon Kodu : BAHAR300",
+                "subVariants": [
+                    {
+                        "id": 1,
+                        "value": "Güzel gidiyorsun! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar. Alışverişe Devam Et"
+                    },
+                    {
+                        "id": 2,
+                        "value": "Çok az kaldı! Sepetine 282 TL ürün ekle 300 TL indirimin keyfini çıkar. Alışverişe Devam Et"
+                    },
+                    {
+                        "id": 3,
+                        "value": "Tebrikler! 300 TL indirim kuponun kullanıma hazır. Toplam 600 TL indirim kazanmak için ise sepetine {{REPLACE}} TL ürün ekle! Kupon Kodu : BAHAR300"
+                    },
+                    {
+                        "id": 4,
+                        "value": "Tebrikler! 600 TL indirim kuponun kullanıma hazır Kupon Kodu : BAHAR600"
+                    }
+                ]
             }
         ]
     }
