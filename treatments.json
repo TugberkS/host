@@ -137,22 +137,22 @@
                 "subVariants": [
                     {
                         "id": 1,
-                        "value": "<div class=\"basket_top_warning-wrapper\"><div class=\"basket_top_warning barem-wrapper\"><i class=\"coupon-icon\"> </i><div class=\"basket_top_column\"><span class=\"membership-text\"><b>Güzel gidiyorsun! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar. Alışverişe Devam Et</b></span></div><a class=\"coupon-redirect\" href=\"/\"> Alışverişe Devam Et &gt;</a><span class=\"close-cart-banner js-close-cart-banner\"> </span></div></div>",
+                        "value": "<div class=\"banner\"><div class=\"banner__text\"><b>Güzel gidiyorsun! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar.</b></div><a class=\"banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 3000 - total;"
                     },
                     {
                         "id": 2,
-                        "value": "<div class=\"basket_top_warning-wrapper\"><div class=\"basket_top_warning barem-wrapper\"><i class=\"coupon-icon\"> </i><div class=\"basket_top_column\"><span class=\"membership-text\"><b>Çok az kaldı! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar. Alışverişe Devam Et</b></span></div><a class=\"coupon-redirect\" href=\"/\"> Alışverişe Devam Et &gt;</a><span class=\"close-cart-banner js-close-cart-banner\"> </span></div></div>",
+                        "value": "<div class=\"banner\"><div class=\"banner__text\"><b>Çok az kaldı! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar.</b></div><a class=\"banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 3000 - total;"
                     },
                     {
                         "id": 3,
-                        "value": "<div class=\"basket_top_warning-wrapper\"><div class=\"basket_top_warning barem-wrapper\"><i class=\"coupon-icon\"> </i><div class=\"basket_top_column\"><span class=\"membership-text\"><b>Tebrikler! 300 TL indirim kuponun kullanıma hazır. Toplam 600 TL indirim kazanmak için ise sepetine {{REPLACE}} TL ürün ekle! Kupon Kodu : YAZAMERHABA300</b></span></div><a class=\"coupon-redirect\" href=\"/\"> Alışverişe Devam Et &gt;</a><span class=\"close-cart-banner js-close-cart-banner\"> </span></div></div>",
+                        "value": "<div class=\"banner\"><div class=\"banner__text\"><b>Tebrikler! 300 TL indirim kuponun kullanıma hazır. Toplam 600 TL indirim kazanmak için ise sepetine {{REPLACE}} TL ürün ekle! Kupon Kodu : YAZAMERHABA300</b></div><a class=\"banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 6000 - total;"
                     },
                     {
                         "id": 4,
-                        "value": "<div class=\"basket_top_warning-wrapper\"><div class=\"basket_top_warning barem-wrapper\"><i class=\"coupon-icon\"> </i><div class=\"basket_top_column\"><span class=\"membership-text\"><b>Tebrikler! 600 TL indirim kuponun kullanıma hazır Kupon Kodu : YAZAMERHABA600</b></span></div><a class=\"coupon-redirect\" href=\"/\"> Alışverişe Devam Et &gt;</a><span class=\"close-cart-banner js-close-cart-banner\"> </span></div></div>"
+                        "value": "<div class=\"banner\"><div class=\"banner__text\"><b>Tebrikler! 600 TL indirim kuponun kullanıma hazır Kupon Kodu : YAZAMERHABA600</b></div><a class=\"banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a></div>"
                     }
                 ]
             }
