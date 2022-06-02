@@ -1,0 +1,41 @@
+.nd-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b757e;
+  max-height: 50px;
+  padding: 1rem;
+  width: 1121px !important;
+}
+.nd-banner__text {
+  font-family: BrandonTextRegular;
+  font-size: 16px;
+  color: white;
+}
+.nd-banner__action-button {
+  text-decoration: underline;
+  font-family: BrandonTextBold;
+  color: white;
+  letter-spacing: 0.7px;
+}
+
+.adora-cta_btn {
+  cursor: pointer;
+  display: block;
+  width: 223px;
+  height: 46px;
+  border-radius: 3px;
+  background-color: #1b757e;
+  line-height: 47px;
+  font-family: BrandonTextBold;
+  font-size: 18px;
+  letter-spacing: 1.13px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.adora-cta_btn:hover {
+  text-decoration: none;
+  color: #fff;
+}
