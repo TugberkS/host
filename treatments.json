@@ -90,7 +90,7 @@
             {
                 "id": 1,
                 "type": "element",
-                "operator": "textNumber",
+                "operator": "text-number",
                 "condition": "lessThan",
                 "value": 1500,
                 "selectorAll": ".price",
@@ -99,7 +99,7 @@
             {
                 "id": 2,
                 "type": "element",
-                "operator": "textNumber",
+                "operator": "text-number",
                 "condition": "between",
                 "value": "1500, 3000",
                 "selectorAll": ".price",
@@ -108,7 +108,7 @@
             {
                 "id": 3,
                 "type": "element",
-                "operator": "textNumber",
+                "operator": "text-number",
                 "condition": "between",
                 "value": "3000, 6000",
                 "selectorAll": ".price",
@@ -117,7 +117,7 @@
             {
                 "id": 4,
                 "type": "element",
-                "operator": "textNumber",
+                "operator": "text-number",
                 "condition": "greaterThan",
                 "value": 6000,
                 "selectorAll": ".price",
@@ -127,29 +127,32 @@
         "actions": [
             {
                 "operator": "remove",
-                "selector": "basket_top_warning-wrapper"
+                "selector": ".basket_top_warning-wrapper"
             },
             {
                 "operator": "insert",
-                "type": "after",
-                "selector": "#checkoutForm > div > div > div.col-sm-12.basket_product_list_header.reserved-product",
-                "value": "3.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim Kupon Kodu : BAHAR300",
+                "type": "before",
+                "selector": "#checkoutForm",
+                "value": "<div class=\"basket_top_warning-wrapper\"><div class=\"basket_top_warning barem-wrapper\"><i class=\"coupon-icon\"> </i><div class=\"basket_top_column\"><span class=\"membership-text\"><b>3.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim Kupon Kodu : YAZAMERHABA300</b></span></div><a class=\"coupon-redirect\" href=\"/\"> Alışverişe Devam Et &gt;</a><span class=\"close-cart-banner js-close-cart-banner\"> </span></div></div>",
                 "subVariants": [
                     {
                         "id": 1,
-                        "value": "Güzel gidiyorsun! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar. Alışverişe Devam Et"
+                        "value": "<div class=\"basket_top_warning-wrapper\"><div class=\"basket_top_warning barem-wrapper\"><i class=\"coupon-icon\"> </i><div class=\"basket_top_column\"><span class=\"membership-text\"><b>Güzel gidiyorsun! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar. Alışverişe Devam Et</b></span></div><a class=\"coupon-redirect\" href=\"/\"> Alışverişe Devam Et &gt;</a><span class=\"close-cart-banner js-close-cart-banner\"> </span></div></div>",
+                        "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 3000 - total;"
                     },
                     {
                         "id": 2,
-                        "value": "Çok az kaldı! Sepetine 282 TL ürün ekle 300 TL indirimin keyfini çıkar. Alışverişe Devam Et"
+                        "value": "<div class=\"basket_top_warning-wrapper\"><div class=\"basket_top_warning barem-wrapper\"><i class=\"coupon-icon\"> </i><div class=\"basket_top_column\"><span class=\"membership-text\"><b>Çok az kaldı! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar. Alışverişe Devam Et</b></span></div><a class=\"coupon-redirect\" href=\"/\"> Alışverişe Devam Et &gt;</a><span class=\"close-cart-banner js-close-cart-banner\"> </span></div></div>",
+                        "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 3000 - total;"
                     },
                     {
                         "id": 3,
-                        "value": "Tebrikler! 300 TL indirim kuponun kullanıma hazır. Toplam 600 TL indirim kazanmak için ise sepetine {{REPLACE}} TL ürün ekle! Kupon Kodu : BAHAR300"
+                        "value": "<div class=\"basket_top_warning-wrapper\"><div class=\"basket_top_warning barem-wrapper\"><i class=\"coupon-icon\"> </i><div class=\"basket_top_column\"><span class=\"membership-text\"><b>Tebrikler! 300 TL indirim kuponun kullanıma hazır. Toplam 600 TL indirim kazanmak için ise sepetine {{REPLACE}} TL ürün ekle! Kupon Kodu : YAZAMERHABA300</b></span></div><a class=\"coupon-redirect\" href=\"/\"> Alışverişe Devam Et &gt;</a><span class=\"close-cart-banner js-close-cart-banner\"> </span></div></div>",
+                        "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 6000 - total;"
                     },
                     {
                         "id": 4,
-                        "value": "Tebrikler! 600 TL indirim kuponun kullanıma hazır Kupon Kodu : BAHAR600"
+                        "value": "<div class=\"basket_top_warning-wrapper\"><div class=\"basket_top_warning barem-wrapper\"><i class=\"coupon-icon\"> </i><div class=\"basket_top_column\"><span class=\"membership-text\"><b>Tebrikler! 600 TL indirim kuponun kullanıma hazır Kupon Kodu : YAZAMERHABA600</b></span></div><a class=\"coupon-redirect\" href=\"/\"> Alışverişe Devam Et &gt;</a><span class=\"close-cart-banner js-close-cart-banner\"> </span></div></div>"
                     }
                 ]
             }
