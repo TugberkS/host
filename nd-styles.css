@@ -10,6 +10,13 @@
   letter-spacing: 0.7px;
   font-size: 16px;
 }
+@media screen and (max-width: 440px) {
+  .nd-banner {
+    height: 46px;
+    margin: 10px 15px 0px;
+    flex-direction: column;
+  }
+}
 .nd-banner__text {
   font-family: BrandonTextRegular;
   margin-left: 29px;
