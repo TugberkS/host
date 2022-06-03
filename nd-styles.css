@@ -1,20 +1,24 @@
 .nd-banner {
-  height: 46px;
-  width: 1091px !important;
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #1b757e;
   padding: 1rem;
-  margin: 10px auto 0px auto;
   letter-spacing: 0.7px;
   font-size: 16px;
 }
 @media screen and (max-width: 440px) {
   .nd-banner {
-    height: 46px;
+    height: 90px;
     margin: 10px 15px 0px;
     flex-direction: column;
+  }
+}
+@media screen and (min-width: 440px) {
+  .nd-banner {
+    height: 46px;
+    width: 1091px !important;
+    margin: 10px auto 0px auto;
+    align-items: center;
+    justify-content: center;
   }
 }
 .nd-banner__text {
