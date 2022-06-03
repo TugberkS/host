@@ -1,22 +1,25 @@
 .nd-banner {
+  height: 46px;
+  width: 1091px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #1b757e;
-  max-height: 50px;
   padding: 1rem;
-  width: 1121px !important;
+  margin: 10px auto 0px auto;
+  letter-spacing: 0.7px;
+  font-size: 16px;
 }
 .nd-banner__text {
   font-family: BrandonTextRegular;
-  font-size: 16px;
+  margin-left: 29px;
   color: white;
 }
 .nd-banner__action-button {
   text-decoration: underline;
   font-family: BrandonTextBold;
   color: white;
-  letter-spacing: 0.7px;
+  margin-left: 6px;
 }
 
 .adora-cta_btn {
