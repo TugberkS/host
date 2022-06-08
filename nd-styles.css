@@ -46,6 +46,37 @@
   margin-bottom: 2rem;
 }
 
+.nd-add-to-win {
+  display: flex;
+}
+.nd-add-to-win__text {
+  display: flex;
+  padding: 10px 10px 10px 20px;
+  background-color: rgba(255, 216, 118, 0.2899999917);
+  align-items: center;
+  border-color: rgb(255, 202, 67);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+}
+.nd-add-to-win__title {
+  color: rgb(197, 110, 41);
+  margin: 0 4px 0 0;
+  font-size: 15px;
+  text-align: left;
+  font-family: BrandonTextRegular;
+}
+.nd-add-to-win__body {
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+  text-align: left;
+  font-family: BrandonTextRegular;
+}
+.nd-add-to-win__image {
+  left: -2.5rem;
+  position: absolute;
+}
+
 .adora-cta_btn {
   cursor: pointer;
   display: block;
