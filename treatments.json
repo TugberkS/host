@@ -143,6 +143,7 @@
                 "operator": "insert",
                 "type": "before",
                 "selector": "body > div.main-custom-container",
+                "selectorFallback": "#main > div",
                 "value": "<div class=\"nd-banner\"><div class=\"nd-banner__text\"><b>3.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim Kupon Kodu : YAZAMERHABA300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a></div>",
                 "replaceFn": null,
                 "subVariants": [
