@@ -310,7 +310,6 @@
                 "operator": "insert",
                 "type": "before",
                 "selector": "body > div.main-custom-container > div.container > div > div.col-md-9 > div.full-width.sticky_header",
-                "selectorFallback": "#main > div > section > div:nth-child(1) > div > div.header-bottom",
                 "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 300 TL indirime biraz daha yaklaş.</div></div><img src=\"https://ndtugs.pages.dev/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>",
                 "subVariants": [
                     {
@@ -476,8 +475,7 @@
             {
                 "operator": "insert",
                 "type": "before",
-                "selector": "body > div.main-custom-container > div.container > div > div.col-md-9 > div.full-width.sticky_header",
-                "selectorFallback": "#main > div > section > div:nth-child(1) > div > div.header-bottom",
+                "selector": "#main > div > section > div:nth-child(1) > div > div.header-bottom",
                 "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 300 TL indirime biraz daha yaklaş.</div></div><img src=\"https://ndtugs.pages.dev/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>",
                 "subVariants": [
                     {
