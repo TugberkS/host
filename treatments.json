@@ -261,7 +261,7 @@
                 "chain_condition": "and",
                 "chain": {
                     "type": "function",
-                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.',''))); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                     "condition": "lessThan",
                     "value": 3000
                 },
@@ -276,13 +276,13 @@
                 "chain_condition": "and",
                 "chain": {
                     "type": "function",
-                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.',''))); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                     "condition": "greaterThan",
                     "value": 3000,
                     "chain_condition": "and",
                     "chain": {
                         "type": "function",
-                        "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.',''))); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                        "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                         "condition": "lessThan",
                         "value": 6000
                     }
@@ -298,7 +298,7 @@
                 "chain_condition": "and",
                 "chain": {
                     "type": "function",
-                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.',''))); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                     "condition": "greaterEquals",
                     "value": 6000
                 },
@@ -427,7 +427,7 @@
                 "chain_condition": "and",
                 "chain": {
                     "type": "function",
-                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.',''))); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                     "condition": "lessThan",
                     "value": 3000
                 },
@@ -448,7 +448,7 @@
                     "chain_condition": "and",
                     "chain": {
                         "type": "function",
-                        "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.',''))); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                        "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                         "condition": "lessThan",
                         "value": 6000
                     }
@@ -470,7 +470,7 @@
                     "chain_condition": "and",
                     "chain": {
                         "type": "function",
-                        "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.',''))); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                        "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                         "condition": "greaterEquals",
                         "value": 6000
                     }
