@@ -176,7 +176,7 @@
     },
     {
         "id": 4,
-        "description": "Sales Motivator (Coupon) - PDP",
+        "description": "Sales Motivator (Coupon) - PDP-Desktop",
         "apply_on_user_segment": "*",
         "device": "desktop",
         "baseRuleSet":[
@@ -223,7 +223,7 @@
                     "type": "element",
                     "operator": "text-number",
                     "selector": "span.price",
-                    "condition": "greaterThan",
+                    "condition": "greaterEquals",
                     "value": 3000,
                     "chain_condition": "and",
                     "chain": {
@@ -247,7 +247,7 @@
                     "type": "element",
                     "operator": "text-number",
                     "selector": "span.price",
-                    "condition": "greaterThan",
+                    "condition": "greaterEquals",
                     "value": 6000
                 },
                 "subVariantId": 3
@@ -275,9 +275,9 @@
                 "selector": "span.basket_length",
                 "chain_condition": "and",
                 "chain": {
-                    "type": "function",
-                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
-                    "condition": "greaterThan",
+                    "type": "counter",
+                    "operator": "CABasketPrice",
+                    "condition": "greaterEquals",
                     "value": 3000,
                     "chain_condition": "and",
                     "chain": {
@@ -297,10 +297,17 @@
                 "selector": "span.basket_length",
                 "chain_condition": "and",
                 "chain": {
-                    "type": "function",
-                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "type": "counter",
+                    "operator": "CABasketPrice",
                     "condition": "greaterEquals",
-                    "value": 6000
+                    "value": 3000,
+                    "chain_condition": "and",
+                    "chain": {
+                        "type": "function",
+                        "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                        "condition": "greaterEquals",
+                        "value": 6000
+                    }
                 },
                 "subVariantId": 6
         }
@@ -342,7 +349,7 @@
     },
     {
         "id": 5,
-        "description": "Sales Motivator (Coupon) - Mobile",
+        "description": "Sales Motivator (Coupon) - PDP-Mobile",
         "apply_on_user_segment": "*",
         "device": "mobile",
         "baseRuleSet":[
@@ -427,7 +434,7 @@
                 "chain_condition": "and",
                 "chain": {
                     "type": "function",
-                    "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "operator": "const itemValue = parseInt(document.querySelector('#sales-price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                     "condition": "lessThan",
                     "value": 3000
                 },
@@ -448,7 +455,7 @@
                     "chain_condition": "and",
                     "chain": {
                         "type": "function",
-                        "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                        "operator": "const itemValue = parseInt(document.querySelector('#sales-price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                         "condition": "lessThan",
                         "value": 6000
                     }
@@ -470,7 +477,7 @@
                     "chain_condition": "and",
                     "chain": {
                         "type": "function",
-                        "operator": "const itemValue = parseInt(document.querySelector('.price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                        "operator": "const itemValue = parseInt(document.querySelector('#sales-price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                         "condition": "greaterEquals",
                         "value": 6000
                     }
