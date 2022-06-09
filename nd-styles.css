@@ -48,6 +48,7 @@
 
 .nd-add-to-win {
   display: flex;
+  margin-left: 23px;
 }
 .nd-add-to-win__text {
   display: flex;
@@ -74,8 +75,52 @@
   font-family: BrandonTextRegular;
 }
 .nd-add-to-win__image {
-  left: -0.75rem;
+  margin-left: 23px;
+  left: -7px;
   position: absolute;
+}
+
+.product-details-bottom.custom-detail {
+  width: 100%;
+}
+
+.ws_images.next-day-image {
+  margin-left: 0 !important;
+  max-height: none !important;
+  position: initial !important;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb {
+  position: relative;
+  width: 100%;
+  top: 8px;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb:before {
+  left: -503;
+  top: 30;
+  width: 100%;
+  height: 20px;
+  transform: rotate(270deg);
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb:after {
+  right: -503;
+  width: 100%;
+  height: 20px;
+  transform: rotate(270deg);
+  top: 30px;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb div {
+  display: block;
+  padding: 0 20px;
+  left: 5px;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb a {
+  display: inline-block;
+  margin: 5px;
 }
 
 .adora-cta_btn {
