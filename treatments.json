@@ -206,7 +206,7 @@
                 "chain": {
                     "type": "element",
                     "operator": "text-number",
-                    "selector": "span.basket_length",
+                    "selector": "span.price",
                     "condition": "lessThan",
                     "value": 3000
                 },
@@ -222,14 +222,14 @@
                 "chain": {
                     "type": "element",
                     "operator": "text-number",
-                    "selector": "span.basket_length",
+                    "selector": "span.price",
                     "condition": "greaterThan",
                     "value": 3000,
                     "chain_condition": "and",
                     "chain": {
                         "type": "element",
                         "operator": "text-number",
-                        "selector": "span.basket_length",
+                        "selector": "span.price",
                         "condition": "lessThan",
                         "value": 6000
                     }
@@ -246,7 +246,7 @@
                 "chain": {
                     "type": "element",
                     "operator": "text-number",
-                    "selector": "span.basket_length",
+                    "selector": "span.price",
                     "condition": "greaterThan",
                     "value": 6000
                 },
