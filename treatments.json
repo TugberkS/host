@@ -42,6 +42,7 @@
                 "operator": "insert",
                 "type": "popup",
                 "applyEvent": ["exitIntent", "copyIntent"],
+                "selector": "body",
                 "contentSelector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > div > div.basket_product_list > ul > li > a > div.product_image > img",
                 "value": "<div style=\"margin: 70px auto; background: #fff; border-radius: 10px; width: 370px; position: relative; display: block;\"><button style=\"position: absolute; right: 0px; top: 0px; margin: 5px;\">X</button><div style=\"display: flex; flex-direction: column; align-items: center\"><div style=\"font-size: 28px; font-weight: 450; text-align: center; margin-bottom: 12px;\">Vivense'de her bütçeye uygun eşya bulmak mümkün!</div><div style=\"font-size: 18px; font-weight: 390; text-align: center; margin-bottom: 12px;\">Sen de tüm kampanyalara ulaşmak için hemen tıkla</div><a class=\"adora-cta_btn\" href=\"indirimli-mobilya-kampanyalari.html\">KAMPANYALARA GIT</a></div></div>",
                 "subVariants": [
