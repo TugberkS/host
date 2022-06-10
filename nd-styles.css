@@ -1,3 +1,50 @@
+.nd-popup {
+  margin: 70px auto;
+  background: #fff;
+  border-radius: 10px;
+  width: 370px;
+  position: relative;
+  display: block;
+}
+.nd-popup__wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.nd-popup__urgency-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nd-popup__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nd-popup__title {
+  font-size: 28px;
+  font-weight: 450;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.nd-popup__text {
+  font-size: 18px;
+  font-weight: 390;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.nd-popup__button-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+}
+
 .nd-banner {
   display: flex;
   background-color: #1b757e;
@@ -57,7 +104,8 @@
     margin-left: 0;
     background: #E4EFF0;
     align-items: center;
-    padding-top: 8px;
+    padding-top: 10px;
+    margin-top: 10px;
   }
 }
 .nd-add-to-win__text {
@@ -117,7 +165,7 @@
   }
 }
 
-.adora-cta_btn {
+.nd-cta_btn {
   cursor: pointer;
   display: block;
   width: 223px;
@@ -133,7 +181,7 @@
   margin-bottom: 30px;
 }
 
-.adora-cta_btn:hover {
+.nd-cta_btn:hover {
   text-decoration: none;
   color: #fff;
 }
