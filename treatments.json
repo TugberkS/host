@@ -26,6 +26,13 @@
                 "operator": "path",
                 "condition": "notEqual",
                 "value": "/siparis-listesi.html"
+            },
+            {
+                "id": 4,
+                "type": "url",
+                "operator": "path",
+                "condition": "notEqual",
+                "value": "/indirimli-mobilya-kampanyalari.html"
             }
         ],
         "subVariantRuleSet": [
