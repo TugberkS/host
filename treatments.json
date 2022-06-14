@@ -3,6 +3,7 @@
         "id": 1,
         "description": "Display exit popup",
         "apply_on_user_segment": "*",
+        "reapply_event": "interval",
         "device": "desktop",
         "baseRuleSet": [
             {
