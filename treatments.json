@@ -44,7 +44,7 @@
                 "applyEvent": ["exitIntent", "copyIntent"],
                 "selector": "body",
                 "contentSelector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > div > div.basket_product_list > ul > li > a > div.product_image > img",
-                "value": "<div class=\"nd-popup\"><div class=\"nd-popup__body\"><div class=\"nd-popup__title\">Vivense'de her bütçeye uygun eşya bulmak mümkün!</div><div style=\"nd-popup__text\">Sen de tüm kampanyalara ulaşmak için hemen tıkla</div><a class=\"nd-cta_btn\" href=\"indirimli-mobilya-kampanyalari.html\">KAMPANYALARA GIT</a></div></div>",
+                "value": "<div class=\"nd-popup\"><div class=\"nd-popup__body\"><div class=\"nd-popup__title--margin\">Vivense'de her bütçeye uygun eşya bulmak mümkün!</div><div class=\"nd-popup__text--margin\">Sen de tüm kampanyalara ulaşmak için hemen tıkla</div><a class=\"nd-cta_btn\" href=\"indirimli-mobilya-kampanyalari.html\">KAMPANYALARA GIT</a></div></div>",
                 "subVariants": [
                     {
                         "id": 1,
@@ -59,6 +59,7 @@
         "description": "Change mobile layout into 1 column",
         "apply_on_user_segment": "*",
         "device": "mobile",
+        "reapply_event": "infinite_scroll",
         "baseRuleSet": [
             {
                 "id": 1,
