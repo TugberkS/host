@@ -201,3 +201,88 @@
   text-decoration: none;
   color: #fff;
 }
+
+.product-details-bottom.custom-detail {
+  width: 100%;
+}
+
+.ws_images.next-day-image {
+  margin-left: 0 !important;
+  max-height: none !important;
+  margin-bottom: 75px;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb {
+  position: absolute;
+  width: 100%;
+  bottom: -3px;
+  top: initial;
+  height: 80px;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb:before {
+  left: -29px;
+  top: 29px;
+  width: 79px;
+  transform: rotate(270deg);
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb:after {
+  right: -29px;
+  width: 81px;
+  height: 20px;
+  transform: rotate(270deg);
+  top: 29px;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb div {
+  width: 400em;
+  padding-top: 0;
+  flex-direction: initial;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb a {
+  display: inline-block;
+  margin: 3px 5px 5px 5px;
+}
+
+#wowslider-container1 .ws_images.next-day-image .ws_list img {
+  margin-top: initial !important;
+}
+
+.category_page_wrapper .category_page_container .product-list-wrapper .product-list_container .product-list .product-card.next-day-product {
+  float: initial;
+}
+
+.category_page_wrapper .category_page_container .product-list-wrapper .product-list_container .product-list .product-card.next-day-product .product-link {
+  float: initial;
+  width: 100%;
+  top: initial;
+  left: initial;
+  display: block;
+}
+
+.category_page_wrapper .category_page_container .product-list-wrapper .product-list_container .product-list .product-card.next-day-product .product-link {
+  float: initial;
+  width: 100%;
+  top: initial;
+  left: initial;
+}
+
+.category_page_wrapper .category_page_container .product-list-wrapper .product-list_container .product-list .product-card.next-day-product .product-link .product_img {
+  height: initial !important;
+  float: initial;
+}
+
+.category_page_wrapper .category_page_container .product-list-wrapper .product-list_container .product-list .product-card.next-day-product .product-link .product_info {
+  margin-top: 1rem !important;
+  float: initial;
+}
+
+.product-card.next-day-product .vvns-promotional-product {
+  margin-top: 10px;
+}
+
+.category_page_wrapper .category_page_container .product-list-wrapper .product-list_container .product-list .product-card .next-day-product .product-link .product_img .new-product-badge {
+  top: calc(100% - 112px);
+}
