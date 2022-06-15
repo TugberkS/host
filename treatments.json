@@ -1,7 +1,9 @@
 [
     {
         "id": 1,
+        "name": "Exit Pop-up",
         "description": "Display exit popup",
+        "category": "Abandonment and Reengagement / Sitewide / Web",
         "apply_on_user_segment": "*",
         "reapply_event": "interval",
         "device": "desktop",
@@ -64,7 +66,9 @@
     },
     {
         "id": 2,
+        "name": "Photo Enlarging",
         "description": "Change mobile layout into 1 column",
+        "category": "Universal Best Practice UX Strategies / Category Pages (PLP) / Mobile App, Mobile Web",
         "apply_on_user_segment": "*",
         "device": "mobile",
         "reapply_event": "infinite_scroll",
@@ -89,12 +93,24 @@
                 "type": "styleApplicator",
                 "value": "{\"width\":\"100%\"}",
                 "selector": "#product-list-wrapper > div.product-list_container > div > div"
+            },
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "next-day-product",
+                "selector": ".product-list > .product-card"
+            }, 
+            {
+                "operator": "remove",
+                "selector": "#product-list-wrapper > div.product-list_container > div > div > div.other_size_options_mobile_wrapper.open_other_product"
             }
         ]
     },
     {
         "id": 3,
+        "name": "Sales Motivator",
         "description": "Sales Motivator (Coupon) - Basket",
+        "category": "Promotional Messaging / Cart and Checkout Pages / Mobile App, Mobile Web, Web",
         "apply_on_user_segment": "*",
         "device": "*",
         "baseRuleSet": [
@@ -186,7 +202,9 @@
     },
     {
         "id": 4,
+        "name": "Sales Motivator",
         "description": "Sales Motivator (Coupon) - PDP-Desktop",
+        "category": "Promotional Messaging / Product Pages (PDP) / Mobile App, Mobile Web",
         "apply_on_user_segment": "*",
         "device": "desktop",
         "baseRuleSet":[
@@ -385,7 +403,9 @@
     },
     {
         "id": 5,
+        "name": "Sales Motivator",
         "description": "Sales Motivator (Coupon) - PDP-Mobile",
+        "category": "Promotional Messaging / Product Pages (PDP) / Web",
         "apply_on_user_segment": "*",
         "device": "mobile",
         "baseRuleSet":[
@@ -554,6 +574,112 @@
                     }
                 ]
             }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Photo Enlarging",
+        "description": "Desktop Photo Enlargement",
+        "category": "Universal Best Practice UX Strategies / Product Pages (PDP) / Web",
+        "apply_on_user_segment": "*",
+        "device": "desktop",
+        "baseRuleSet": [
+            {
+                "id": 1,
+                "type": "dataLayer",
+                "operator": "PageType",
+                "condition": "equal",
+                "value": "Productpage"
+            }
+        ],
+        "actions": [
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "container-fluid",
+                "selector": ".main-custom-container > .container"
+            },
+            {
+                "operator": "edit",
+                "type": "removeClass",
+                "value": "main-custom-container > container",
+                "selector": ".main-custom-container > .container"
+            },
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "custom-row",
+                "selector": ".main-custom-container > .container-fluid> .row"
+            },
+            {
+                "operator": "edit",
+                "type": "removeClass",
+                "value": "main-custom-container > container-fluid> row",
+                "selector": ".main-custom-container > .container-fluid> .row"
+            },
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "custom-detail",
+                "selector": ".sticky_column > .product-details-bottom"
+            },
+            {
+                "operator": "edit",
+                "type": "styleApplicator",
+                "value": "{\"width\":\"100%\"}",
+                "selector": ".button-add-cart-action .add-to-cart-btn"
+            },
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "next-day-image",
+                "selector": "#wowslider-container1 > .ws_images"
+            },
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "next-day-thumb",
+                "selector": "#wowslider-container1 > .ws_thumbs"
+            },
+            {
+                "operator": "remove",
+                "selector": "#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar > div > div.product-price-details > table > tbody > tr:nth-child(1) > td.components-change.components-change-custom > div"
+            },
+            {
+                "operator": "remove",
+                "selector": "#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar > div > div.chose_fabric > div"
+            },
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "container-fluid",
+                "selector": "body > div.main-custom-container > div.full-width > div"
+            },
+            {
+                "operator": "edit",
+                "type": "removeClass",
+                "value": "main-custom-container > container",
+                "selector": "body > div.main-custom-container > div.full-width > div"
+            },
+            {
+                "operator": "edit",
+                "type": "styleApplicator",
+                "value": "{\"padding-left\":\"inherit\"}",
+                "selector": "#breadcrumb-ol"
+            },
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "image-edit-content",
+                "selector": ".ws_images.next-day-image > div"
+            },
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "image-edit",
+                "selector": "#wowslider-container1 > .ws_images.next-day-image > .image-edit-content > .ws_list > ul > li > a > img"
+            }
+            
         ]
     }
 ]
