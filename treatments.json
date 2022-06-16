@@ -5,7 +5,8 @@
         "description": "Display exit popup",
         "category": "Abandonment and Reengagement / Sitewide / Web",
         "apply_on_user_segment": "*",
-        "reapply_event": "interval",
+        "reapply_event": "element_change",
+        "reapply_selector": "div.shortcut_column.basket_wrapper.my-cart",
         "device": "desktop",
         "baseRuleSet": [
             {
@@ -204,7 +205,7 @@
         "id": 4,
         "name": "Sales Motivator",
         "description": "Sales Motivator (Coupon) - PDP-Desktop",
-        "category": "Promotional Messaging / Product Pages (PDP) / Mobile App, Mobile Web",
+        "category": "Promotional Messaging / Product Pages (PDP) / Mobile App, Web",
         "apply_on_user_segment": "*",
         "device": "desktop",
         "baseRuleSet":[
@@ -405,7 +406,7 @@
         "id": 5,
         "name": "Sales Motivator",
         "description": "Sales Motivator (Coupon) - PDP-Mobile",
-        "category": "Promotional Messaging / Product Pages (PDP) / Web",
+        "category": "Promotional Messaging / Product Pages (PDP) / Mobile Web",
         "apply_on_user_segment": "*",
         "device": "mobile",
         "baseRuleSet":[
@@ -678,6 +679,12 @@
                 "type": "addClass",
                 "value": "image-edit",
                 "selector": "#wowslider-container1 > .ws_images.next-day-image > .image-edit-content > .ws_list > ul > li > a > img"
+            },
+            {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "next-day-sticky-f",
+                "selector": ".full-width.sticky_header"
             }
             
         ]
