@@ -320,7 +320,8 @@
 }
 .nd-money-back__body {
   display: inline-flex;
+  align-items: center;
   margin-left: 18px;
-  font-family: BrandonTextRegular;
+  font-family: BrandonTextBold;
   font-size: 18px;
 }
