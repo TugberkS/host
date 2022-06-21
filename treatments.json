@@ -824,7 +824,7 @@
             {
                 "operator": "insert",
                 "type": "before",
-                "value": "<div>HI!</div>",
+                "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndtugs.pages.dev/money-back.png\" /><div>3 gün içinde koşulsuz Vivense para iade garantisi</div></div></div></div>",
                 "selector": "body > div.main-custom-container > div.container.addresslist-content"
             }
         ]
