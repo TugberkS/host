@@ -67,6 +67,7 @@
   padding: 1rem;
   letter-spacing: 0.7px;
   font-size: 16px;
+  position: relative;
 }
 @media screen and (max-width: 441px) {
   .nd-banner {
@@ -91,19 +92,28 @@
 }
 @media screen and (max-width: 441px) {
   .nd-banner__text {
-    margin-left: 20px;
+    margin: 0 15px 0 20px;
   }
 }
 .nd-banner__action-button {
   text-decoration: underline;
   font-family: BrandonTextBold;
   color: white;
-  margin-left: 6px;
+  margin: 0 10px 0 6px;
 }
 @media screen and (max-width: 441px) {
   .nd-banner__action-button {
     margin-left: 20px;
   }
+}
+.nd-banner__close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+  border: none;
+  color: white;
+  background: none;
 }
 .nd-banner--margin-bottom {
   margin-bottom: 2rem;
@@ -285,4 +295,12 @@
 
 .category_page_wrapper .category_page_container .product-list-wrapper .product-list_container .product-list .product-card .next-day-product .product-link .product_img .new-product-badge {
   top: calc(100% - 112px);
+}
+
+.full-width.sticky_header.next-day-sticky-f {
+  z-index: 99 !important;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb .video-play-icon {
+  width: 100% !important;
 }
