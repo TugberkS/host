@@ -824,7 +824,7 @@
             {
                 "operator": "insert",
                 "type": "before",
-                "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndtugs.pages.dev/money-back.png\" /><div style=\"margin-left: 8px\">3 GÜN İÇİNDE KOŞULSUZ VIVENSE PARA IADE GARANTISI</div></div></div></div>",
+                "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndtugs.pages.dev/money-back.png\" style=\"width:36px; height:24px;\"/><div style=\"margin-left: 8px\">3 GÜN İÇİNDE KOŞULSUZ VIVENSE PARA IADE GARANTISI</div></div></div></div>",
                 "selector": "#address-section",
                 "selectorFallback": "#order-cart-addreslist"
             }
