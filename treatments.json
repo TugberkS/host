@@ -52,7 +52,7 @@
                 "applyEvent": ["exitIntent", "copyIntent"],
                 "selector": "body",
                 "contentSelector": "body > div.desktop_layout_wrapper > div.middle_header_wrapper > div > div.middle_header_inner_column.middle_header_inner_shortcuts_wrapper > div > div.shortcut_column.basket_wrapper.my-cart > div > div.basket_product_list > ul > li > a > div.product_image > img",
-                "value": "<div class=\"nd-popup\"><div class=\"nd-popup__body\"><img src=\"{{REPLACE}}\" style=\"width: 370px;height: auto;border-radius: 10px 10px 0px 0px; margin-bottom: 30px;\"><div class=\"nd-popup__urgency-text\"><img src=\"https://ndvivense.glov.ai/assets/selling_out.png\" width=\"90px\" style=\"width: 30px; height: 20px\">Ürünlerin Tükeniyor</div><div class=\"nd-popup__title\">Acele et! Ürünlerin tükenmeden satın al</div><div class=\"nd-popup__text\">Sepetindeki ürünler hızlıca tükeniyor. Stoklar bitmeden Vivense kalitesini yaşa.</div><a class=\"nd-cta_btn\" href=\"siparis-listesi.html\">SEPETE GIT</a></div></div>"
+                "value": "<div class=\"nd-popup\"><div class=\"nd-popup__body\"><img src=\"{{REPLACE}}\" style=\"width: 370px;height: auto;border-radius: 10px 10px 0px 0px; margin-bottom: 30px;\"><div class=\"nd-popup__title\">Sipariş vermenin tam zamanı!</div><div class=\"nd-popup__text\">Sepetindeki ürünlerin stokları azalıyor. Şimdi alışverişini tamamla, ürünlerin daha hızlı teslim edilsin!</div><a class=\"nd-cta_btn\" href=\"siparis-listesi.html\">ŞİMDİ SİPARİŞ VER</a></div></div>"
             }
         ]
     },
@@ -168,31 +168,31 @@
                 "type": "before",
                 "selector": "body > div.main-custom-container",
                 "selectorFallback": "#main > div",
-                "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000TL ve üzeri alışverişlerde geçerli 300TL indirim Kupon Kodu : YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim! Kupon kodu:YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                 "replaceFn": null,
                 "subVariants": [
                     {
                         "id": 1,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Güzel gidiyorsun! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim! Kupon kodu: YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 4000 - total;"
                     },
                     {
                         "id": 2,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Çok az kaldı! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Güzel gidiyorsun! Sepetine {{REPLACE}} TL değerinde ürün ekleyerek anında 300 TL indirime sahip olabilirsin.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 4000 - total;"
                     },
                     {
                         "id": 3,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 300TL indirim kuponun YAZ300 sepetinde kullanıma hazır. 300TL daha indirim kazanmak için, sepetine {{REPLACE}} TL ürün ekle.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 300 TL indirim kuponun kullanıma hazır. Kupon kodu: AAASepetine {{REPLACE}} TL değerinde ürün ekleyerek anında 600 TL indirime sahip olabilirsin.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 7000 - total;"
                     },
                     {
                         "id": 4,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 600TL indirim kuponun YAZ600 sepetinde kullanıma hazır.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>"
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 600 TL indirim kuponun kullanıma hazır. Kupon kodu: YAZ600</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>"
                     }
                 ]
             }
@@ -268,31 +268,31 @@
                 "type": "before",
                 "selector": "body > div.main-custom-container",
                 "selectorFallback": "#main > div",
-                "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000TL ve üzeri alışverişlerde geçerli 300TL indirim Kupon Kodu : YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim! Kupon kodu:YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                 "replaceFn": null,
                 "subVariants": [
                     {
                         "id": 1,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Güzel gidiyorsun! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim! Kupon kodu: YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('#price:not(.not-allowed-coupon)')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 4000 - total;"
                     },
                     {
                         "id": 2,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Çok az kaldı! Sepetine {{REPLACE}} TL ürün ekle 300 TL indirimin keyfini çıkar.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Güzel gidiyorsun! Sepetine {{REPLACE}} TL değerinde ürün ekleyerek anında 300 TL indirime sahip olabilirsin.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('#price:not(.not-allowed-coupon)')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 4000 - total;"
                     },
                     {
                         "id": 3,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 300TL indirim kuponun YAZ300 sepetinde kullanıma hazır. 300TL daha indirim kazanmak için, sepetine {{REPLACE}} TL ürün ekle.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 300 TL indirim kuponun kullanıma hazır. Kupon kodu: AAASepetine {{REPLACE}} TL değerinde ürün ekleyerek anında 600 TL indirime sahip olabilirsin.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('#price:not(.not-allowed-coupon)')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 7000 - total;"
                     },
                     {
                         "id": 4,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 600TL indirim kuponun YAZ600 sepetinde kullanıma hazır.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>"
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 600 TL indirim kuponun kullanıma hazır. Kupon kodu: YAZ600</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>"
                     }
                 ]
             }
@@ -478,35 +478,36 @@
                 "operator": "insert",
                 "type": "before",
                 "selector": "body > div.main-custom-container > div.container > div > div.col-md-9 > div.full-width.sticky_header",
-                "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 300 TL indirime biraz daha yaklaş.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>",
+                "selectorFallback": "body > div.main-custom-container > div.container-fluid > div > div.col-md-9 > div.full-width.sticky_header.next-day-sticky-f",
+                "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekleyerek anında 300 TL indirime bir adım daha yaklaş.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>",
                 "subVariants": [
                     {
                         "id": 1,
-                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 300 TL indirime biraz daha yaklaş.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekleyerek anında 300 TL indirime bir adım daha yaklaş.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
                     },
                     {
                         "id": 2,
-                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 300 TL indirim kuponun sepetinde kullanıma hazır olsun.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekleyerek anında 300 TL indirime sahip olabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
                     },
                     {
                         "id": 3,
-                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 600 TL indirim kuponun sepetinde kullanıma hazır olsun.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekleyerek anında 600 TL indirime sahip olabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
                     },
                     {
                         "id": 4,
-                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekle 300 TL indirime biraz daha yaklaş.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekleyerek 300 TL indirime daha çok yaklaşabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
                     },
                     {
                         "id": 41,
-                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekle 300 TL indirimin keyfini çıkar.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekleyerek anında 300 TL indirime sahip olabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
                     },
                     {
                         "id": 5,
-                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Tebrikler! 300TL indirim kuponun sepetinde kullanıma hazır. 300TL daha indirim kazanmak için, sepetine bu ürünü ekleyerek yaklaşabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Tebrikler! 300 TL indirim kuponun sepette seni bekliyor. 600 TL indirim kazanmak için alışverişe devam et.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
                     },
                     {
                         "id": 6,
-                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Tebrikler! 300TL indirim kuponun sepetinde kullanıma hazır. 300TL daha indirim kazanmak için, sepetine bu ürünü ekle ve indirimin keyfini çıkar.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Tebrikler! 300 TL indirim kuponun sepette seni bekliyor. Sepetine bu ürünü ekleyerek anında 600 TL indirime sahip olabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
                     }
                 ]
             }
@@ -664,31 +665,31 @@
                 "operator": "insert",
                 "type": "before",
                 "selector": "#main > div > section > div:nth-child(1) > div > div.header-bottom",
-                "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 300 TL indirime biraz daha yaklaş.</div></div></div>",
+                "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekleyerek anında 300 TL indirime bir adım daha yaklaş.</div></div></div>",
                 "subVariants": [
                     {
                         "id": 1,
-                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 300 TL indirime biraz daha yaklaş.</div></div></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekleyerek anında 300 TL indirime bir adım daha yaklaş.</div></div></div>"
                     },
                     {
                         "id": 2,
-                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 300 TL indirim kuponun sepetinde kullanıma hazır olsun.</div></div></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekleyerek anında 300 TL indirime sahip olabilirsin.</div></div></div>"
                     },
                     {
                         "id": 3,
-                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekle 600 TL indirim kuponun sepetinde kullanıma hazır olsun.</div></div></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Sepetine bu ürünü ekleyerek anında 600 TL indirime sahip olabilirsin.</div></div></div>"
                     },
                     {
                         "id": 4,
-                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekle 300 TL indirime biraz daha yaklaş.</div></div></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekleyerek 300 TL indirime daha çok yaklaşabilirsin.</div></div></div>"
                     },
                     {
                         "id": 5,
-                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Tebrikler! 300TL indirim kuponun sepetinde kullanıma hazır. 300TL daha indirim kazanmak için, sepetine bu ürünü ekleyerek yaklaşabilirsin.</div></div></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Tebrikler! 300 TL indirim kuponun sepette seni bekliyor. 600 TL indirim kazanmak için alışverişe devam et.</div></div></div>"
                     },
                     {
                         "id": 6,
-                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndtugs.pages.dev/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Tebrikler! 300TL indirim kuponun sepetinde kullanıma hazır. 300TL daha indirim kazanmak için, sepetine bu ürünü ekle ve indirimin keyfini çıkar.</div></div></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndtugs.pages.dev/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Tebrikler! 300 TL indirim kuponun sepette seni bekliyor. Sepetine bu ürünü ekleyerek anında 600 TL indirime sahip olabilirsin.</div></div></div>"
                     }
                 ]
             }
