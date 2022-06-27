@@ -539,7 +539,7 @@
         "category": "Promotional Messaging / Product Pages (PDP) / Mobile Web",
         "apply_on_user_segment": "*",
         "reapply_event": "element_change",
-        "reapply_selector": "div.shortcut_column.basket_wrapper.my-cart",
+        "reapply_selector": ".basket_icon.my-cart-mobile",
         "device": "mobile",
         "baseRuleSet":[
             {
@@ -634,11 +634,11 @@
                 "type": "element",
                 "operator": null,
                 "condition": "exist",
-                "selector": "span.basket_length",
+                "selector": "#cart_quantity",
                 "chain_condition": "and",
                 "chain": {
                     "type": "function",
-                    "operator": "let selector = '.price'; if(!document.querySelector(selector)){selector = '.new-price'} const itemValue = parseInt(document.querySelector(selector).textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "operator": "const itemValue = parseInt(document.querySelector('#sales-price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                     "condition": "greaterEquals",
                     "value": 7000,
                     "chain_condition": "and",
@@ -656,11 +656,11 @@
                 "type": "element",
                 "operator": null,
                 "condition": "exist",
-                "selector": "span.basket_length",
+                "selector": "#cart_quantity",
                 "chain_condition": "and",
                 "chain": {
                     "type": "function",
-                    "operator": "let selector = '.price'; if(!document.querySelector(selector)){selector = '.new-price'} const itemValue = parseInt(document.querySelector(selector).textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "operator": "const itemValue = parseInt(document.querySelector('#sales-price').textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                     "condition": "greaterEquals",
                     "value": 4000,
                     "chain_condition": "and",
