@@ -410,7 +410,7 @@
                     "type": "function",
                     "operator": "let selector = '.price'; if(!document.querySelector(selector)){selector = '.new-price'} const itemValue = parseInt(document.querySelector(selector).textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
                     "condition": "greaterEquals",
-                    "value": 4000,
+                    "value": 7000,
                     "chain_condition": "and",
                     "chain": {
                         "type": "counter",
@@ -420,6 +420,28 @@
                     }
                 },
                 "subVariantId": 41
+            },
+            {
+                "id": 42,
+                "type": "element",
+                "operator": null,
+                "condition": "exist",
+                "selector": "span.basket_length",
+                "chain_condition": "and",
+                "chain": {
+                    "type": "function",
+                    "operator": "let selector = '.price'; if(!document.querySelector(selector)){selector = '.new-price'} const itemValue = parseInt(document.querySelector(selector).textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "condition": "greaterEquals",
+                    "value": 4000,
+                    "chain_condition": "and",
+                    "chain": {
+                        "type": "counter",
+                        "operator": "CABasketPrice",
+                        "condition": "lessThan",
+                        "value": 4000
+                    }
+                },
+                "subVariantId": 42
             },
             {
                 "id": 5,
@@ -492,6 +514,10 @@
                     },
                     {
                         "id": 41,
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekleyerek anında 600 TL indirime sahip olabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
+                    },
+                    {
+                        "id": 42,
                         "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekleyerek anında 300 TL indirime sahip olabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
                     },
                     {
@@ -512,6 +538,8 @@
         "description": "Sales Motivator (Coupon) - PDP-Mobile",
         "category": "Promotional Messaging / Product Pages (PDP) / Mobile Web",
         "apply_on_user_segment": "*",
+        "reapply_event": "element_change",
+        "reapply_selector": "div.shortcut_column.basket_wrapper.my-cart",
         "device": "mobile",
         "baseRuleSet":[
             {
@@ -602,6 +630,50 @@
                 "subVariantId": 4
             },
             {
+                "id": 41,
+                "type": "element",
+                "operator": null,
+                "condition": "exist",
+                "selector": "span.basket_length",
+                "chain_condition": "and",
+                "chain": {
+                    "type": "function",
+                    "operator": "let selector = '.price'; if(!document.querySelector(selector)){selector = '.new-price'} const itemValue = parseInt(document.querySelector(selector).textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "condition": "greaterEquals",
+                    "value": 7000,
+                    "chain_condition": "and",
+                    "chain": {
+                        "type": "counter",
+                        "operator": "CABasketPrice",
+                        "condition": "lessThan",
+                        "value": 4000
+                    }
+                },
+                "subVariantId": 41
+            },
+            {
+                "id": 42,
+                "type": "element",
+                "operator": null,
+                "condition": "exist",
+                "selector": "span.basket_length",
+                "chain_condition": "and",
+                "chain": {
+                    "type": "function",
+                    "operator": "let selector = '.price'; if(!document.querySelector(selector)){selector = '.new-price'} const itemValue = parseInt(document.querySelector(selector).textContent.replace('TL', '').replace('.','')); const caBasketPrice = parseInt(window.localStorage.getItem('ND_CABasketPrice')); return itemValue + caBasketPrice;",
+                    "condition": "greaterEquals",
+                    "value": 4000,
+                    "chain_condition": "and",
+                    "chain": {
+                        "type": "counter",
+                        "operator": "CABasketPrice",
+                        "condition": "lessThan",
+                        "value": 4000
+                    }
+                },
+                "subVariantId": 42
+            },
+            {
                 "id": 5,
                 "type": "element",
                 "operator": null,
@@ -648,6 +720,12 @@
         ],
         "actions": [
             {
+                "operator": "edit",
+                "type": "styleApplicator",
+                "value": "{\"float\":\"none\"}",
+                "selector": "div.product_images_wrapper"
+            },
+            {
                 "operator": "insert",
                 "type": "before",
                 "selector": "#main > div > section > div:nth-child(1) > div > div.header-bottom",
@@ -668,6 +746,14 @@
                     {
                         "id": 4,
                         "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekleyerek 300 TL indirime daha çok yaklaşabilirsin.</div></div></div>"
+                    },
+                    {
+                        "id": 41,
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekleyerek anında 600 TL indirime sahip olabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
+                    },
+                    {
+                        "id": 42,
+                        "value": "<div class=\"nd-add-to-win\"><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div><div class=\"nd-add-to-win__body\">Güzel gidiyorsun! Sepetine bu ürünü ekleyerek anında 300 TL indirime sahip olabilirsin.</div></div><img src=\"https://ndvivense.glov.ai/assets/gift--gold.png\" class=\"nd-add-to-win__image\" /></div>"
                     },
                     {
                         "id": 5,
