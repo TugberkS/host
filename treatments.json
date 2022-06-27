@@ -320,14 +320,7 @@
                 "type": "element",
                 "operator": null,
                 "selector": ".not-allowed-coupon",
-                "condition": "notExist",
-                "chain_condition": "and",
-                "chain": {
-                    "type": "element",
-                    "operator": null,
-                    "selector": ".promotional-price-text",
-                    "condition": "notExist"
-                }
+                "condition": "notExist"
             }
         ],
         "subVariantRuleSet": [
@@ -533,14 +526,7 @@
                 "type": "element",
                 "operator": null,
                 "selector": ".not-allowed-coupon",
-                "condition": "notExist",
-                "chain_condition": "and",
-                "chain": {
-                    "type": "element",
-                    "operator": null,
-                    "selector": ".promotional-price-text",
-                    "condition": "notExist"
-                }
+                "condition": "notExist"
             }
         ],
         "subVariantRuleSet": [
