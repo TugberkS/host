@@ -20,7 +20,7 @@
                 "id": 2,
                 "type": "counter",
                 "operator": "pageView",
-                "condition": "greaterEquals",
+                "condition": "greaterThan",
                 "value": 2
             },
             {
@@ -168,7 +168,7 @@
                 "type": "before",
                 "selector": "body > div.main-custom-container",
                 "selectorFallback": "#main > div",
-                "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim! Kupon kodu:YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim! Kupon kodu: YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                 "replaceFn": null,
                 "subVariants": [
                     {
@@ -186,7 +186,7 @@
                     {
                         "id": 3,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 300 TL indirim kuponun kullanıma hazır. Kupon kodu: AAASepetine {{REPLACE}} TL değerinde ürün ekleyerek anında 600 TL indirime sahip olabilirsin.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 300 TL indirim kuponun kullanıma hazır. Kupon kodu: YAZ300<br/>Sepetine {{REPLACE}} TL değerinde ürün ekleyerek anında 600 TL indirime sahip olabilirsin.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('.price')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 7000 - total;"
                     },
                     {
@@ -268,7 +268,7 @@
                 "type": "before",
                 "selector": "body > div.main-custom-container",
                 "selectorFallback": "#main > div",
-                "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim! Kupon kodu:YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>4.000 TL ve üzeri alışverişlerde geçerli 300 TL indirim! Kupon kodu: YAZ300</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                 "replaceFn": null,
                 "subVariants": [
                     {
@@ -286,7 +286,7 @@
                     {
                         "id": 3,
                         "selector": "#checkoutForm",
-                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 300 TL indirim kuponun kullanıma hazır. Kupon kodu: AAASepetine {{REPLACE}} TL değerinde ürün ekleyerek anında 600 TL indirime sahip olabilirsin.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
+                        "value": "<div class=\"nd-banner\" id=\"nd-banner\"><div class=\"nd-banner__text\"><b>Tebrikler! 300 TL indirim kuponun kullanıma hazır. Kupon kodu: YAZ300<br/>Sepetine {{REPLACE}} TL değerinde ürün ekleyerek anında 600 TL indirime sahip olabilirsin.</b></div><a class=\"nd-banner__action-button\" href=\"/\"> Alışverişe Devam Et &gt;</a><button class=\"nd-banner__close-button\" onClick=\"$('#nd-banner').remove()\">X</button></div>",
                         "replaceFn": "const elems = Array.from(document.querySelectorAll('#price:not(.not-allowed-coupon)')); const total = elems.reduce((returnVal, elem) => {returnVal += parseInt(elem.textContent.replace('TL', '').replace('.', '')); return returnVal;}, 0); return 7000 - total;"
                     },
                     {
