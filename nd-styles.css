@@ -364,5 +364,6 @@
 }
 
 .sticky_column .product-right-sidebar .product-price-details .components-change .nd-changecontent-fix:after {
-  bottom: 0;
+  position: absolute;
+  right: 8px;
 }
