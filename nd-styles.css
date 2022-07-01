@@ -300,11 +300,11 @@
   top: calc(100% - 112px);
 }
 
-nd-remove-pseudo-elements:after {
+.nd-remove-pseudo-elements:after {
   display: none;
 }
 
-nd-remove-pseudo-elements:before {
+.nd-remove-pseudo-elements:before {
   display: none;
 }
 
