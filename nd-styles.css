@@ -300,10 +300,6 @@
   top: calc(100% - 112px);
 }
 
-.full-width.sticky_header.next-day-sticky-f {
-  z-index: 99 !important;
-}
-
 #wowslider-container1 .ws_thumbs.next-day-thumb .video-play-icon {
   width: 100% !important;
 }
