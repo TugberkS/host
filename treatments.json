@@ -902,7 +902,7 @@
             {
                 "operator": "edit",
                 "type": "styleApplicator",
-                "value": "{\"margin-bottom\": \"0\"; \"width\": \"unset\"}",
+                "value": "{\"margin-bottom\": \"0\", \"width\": \"unset\"}",
                 "selector": ".product-main-details"
             },
             {
