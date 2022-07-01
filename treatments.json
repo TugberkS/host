@@ -785,7 +785,7 @@
                     },
                     {
                         "id": 6,
-                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndtugs.pages.dev/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Tebrikler! 300 TL indirim kuponun sepette seni bekliyor. Sepetine bu ürünü ekleyerek anında 600 TL indirime sahip olabilirsin.</div></div></div>"
+                        "value": "<div class=\"nd-add-to-win\"><div><img src=\"https://ndvivense.glov.ai/assets/gift--grey.png\" class=\"nd-add-to-win__image\"><div class=\"nd-add-to-win__title\">Ekle ve Kazan:</div></div><div class=\"nd-add-to-win__text\"><div class=\"nd-add-to-win__body\">Tebrikler! 300 TL indirim kuponun sepette seni bekliyor. Sepetine bu ürünü ekleyerek anında 600 TL indirime sahip olabilirsin.</div></div></div>"
                     }
                 ]
             }
@@ -895,18 +895,22 @@
                 "selector": "#wowslider-container1 > .ws_images.next-day-image > .image-edit-content > .ws_list > ul > li > a > img"
             },
             {
-                "operator": "edit",
-                "type": "addClass",
-                "value": "next-day-sticky-f",
-                "selector": ".full-width.sticky_header"
+                "operator": "mvoe",
+                "move_selector_1": "body > div.main-custom-container > div.container-fluid > div > div.col-md-9 > div.full-width.sticky_header",
+                "move_selector_2": "#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar"
             },
             {
                 "operator":"edit",
                 "type":"addClass",
                 "value":"nd-changecontent-fix",
                 "selector":"#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar > div > div.product-price-details > table > tbody > tr:nth-child(1) > td.components-change.components-change-custom > a"
+            },
+            {
+                "operator": "edit",
+                "type": "styleApplicator",
+                "value": "{\"margin-left\":\"calc(100vw - 1350px - (100vw - 1320px) / 2)\"}",
+                "selector": "#breadcrumb-ol"
             }
-            
             
         ]
     },
