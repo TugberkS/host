@@ -895,7 +895,7 @@
                 "selector": "#wowslider-container1 > .ws_images.next-day-image > .image-edit-content > .ws_list > ul > li > a > img"
             },
             {
-                "operator": "mvoe",
+                "operator": "move",
                 "move_selector_1": "body > div.main-custom-container > div.container-fluid > div > div.col-md-9 > div.full-width.sticky_header",
                 "move_selector_2": "#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar"
             },
