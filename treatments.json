@@ -906,6 +906,12 @@
                 "selector": ".product-main-details"
             },
             {
+                "operator": "edit",
+                "type": "addClass",
+                "value": "nd-remove-pseudo-elements",
+                "selector": ".product-main-details"
+            },
+            {
                 "operator":"edit",
                 "type":"addClass",
                 "value":"nd-changecontent-fix",
