@@ -925,15 +925,15 @@
             },
             {
                 "operator": "edit",
-                "type": "styleApplicator",
-                "value": "{\"flex-wrap\":\"wrap\", \"justify-content\":\"space-evenly\", \"padding\":\"15px\", \"flex-direction\":\"column\"}",
-                "selector": ".product-main-detail-card"
+                "type": "addClass",
+                "value": "nd-rating-popup",
+                "selector": ".vvns-customer-rating-modal"
             },
             {
                 "operator": "edit",
                 "type": "styleApplicator",
-                "value": "{\"right\":\"-15px\", \"top\":\"92px\"}",
-                "selector": ".vvns-customer-rating-modal"
+                "value": "{\"flex-wrap\":\"wrap\", \"justify-content\":\"space-evenly\", \"padding\":\"15px\", \"align-items\":\"unset\"}",
+                "selector": ".product-main-detail-card"
             },
             {
                 "operator": "edit",
