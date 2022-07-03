@@ -371,3 +371,19 @@
   position: absolute;
   right: 8px;
 }
+
+@media screen and (min-width: 1320px) {
+  .nd-breadcrumb {
+    margin-left: calc(100vw - 1357px - (100vw - 1320px) / 2);
+  }
+}
+@media screen and (min-width: 1120px) and (max-width: 1320px) {
+  .nd-breadcrumb {
+    margin-left: calc(100vw - 1157px - (100vw - 1120px) / 2);
+  }
+}
+@media screen and (max-width: 1119px) {
+  .nd-breadcrumb {
+    margin-left: initial;
+  }
+}
