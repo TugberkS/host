@@ -902,7 +902,7 @@
             {
                 "operator": "edit",
                 "type": "styleApplicator",
-                "value": "{\"margin-bottom\": \"0\", \"width\": \"unset\"}",
+                "value": "{\"margin-bottom\": \"0\", \"width\": \"unset\", \"height\": \"unset\"}",
                 "selector": ".product-main-details"
             },
             {
@@ -919,21 +919,46 @@
             },
             {
                 "operator": "edit",
+                "mdCondition": "(min-width: 1320px)",
                 "type": "styleApplicator",
                 "value": "{\"margin-left\":\"calc(100vw - 1350px - (100vw - 1320px) / 2)\"}",
                 "selector": "#breadcrumb-ol"
             },
             {
                 "operator": "edit",
+                "mdCondition": "(min-width: 1120px) and (max-width: 1320px)",
                 "type": "styleApplicator",
-                "value": "{\"flex-wrap\":\"wrap\", \"justify-content\":\"space-evenly\", \"padding\":\"15px\"}",
+                "value": "{\"margin-left\":\"calc(100vw - 1150px - (100vw - 1120px) / 2)\"}",
+                "selector": "#breadcrumb-ol"
+            },
+            {
+                "operator": "edit",
+                "type": "styleApplicator",
+                "value": "{\"flex-wrap\":\"wrap\", \"justify-content\":\"space-evenly\", \"padding\":\"15px\", \"flex-direction\":\"column\"}",
                 "selector": ".product-main-detail-card"
             },
             {
                 "operator": "edit",
                 "type": "styleApplicator",
-                "value": "{\"right\":\"-15px\", \"top\":\"83px\"}",
+                "value": "{\"right\":\"-15px\", \"top\":\"92px\"}",
                 "selector": ".vvns-customer-rating-modal"
+            },
+            {
+                "type": "styleApplicator",
+                "value": "{\"white-space\":\"pre-line\", \"text-align\":\"center\"}",
+                "selector": ".product-title"
+            },
+            {
+                "operator": "edit",
+                "type": "styleApplicator",
+                "value": "{\"border-bottom\":\"1px solid #efefef\"}",
+                "selector": ".full-width.sticky_header"
+            },
+            {
+                "operator": "edit",
+                "type": "styleApplicator",
+                "value": "{\"margin-bottom\":\"6px\"}",
+                "selector": ".vvns-customer-rating__stars"
             }
             
         ]
