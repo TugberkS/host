@@ -944,6 +944,7 @@
                 "selector": ".vvns-customer-rating-modal"
             },
             {
+                "operator": "edit",
                 "type": "styleApplicator",
                 "value": "{\"white-space\":\"pre-line\", \"text-align\":\"center\"}",
                 "selector": ".product-title"
