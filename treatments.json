@@ -919,16 +919,8 @@
             },
             {
                 "operator": "edit",
-                "mdCondition": "(min-width: 1320px)",
-                "type": "styleApplicator",
-                "value": "{\"margin-left\":\"calc(100vw - 1350px - (100vw - 1320px) / 2)\"}",
-                "selector": "#breadcrumb-ol"
-            },
-            {
-                "operator": "edit",
-                "mdCondition": "(min-width: 1120px) and (max-width: 1320px)",
-                "type": "styleApplicator",
-                "value": "{\"margin-left\":\"calc(100vw - 1150px - (100vw - 1120px) / 2)\"}",
+                "type": "addClass",
+                "value": "nd-breadcrumb",
                 "selector": "#breadcrumb-ol"
             },
             {
