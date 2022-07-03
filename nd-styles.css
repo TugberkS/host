@@ -125,6 +125,7 @@
 .nd-add-to-win {
   display: flex;
   margin-left: 23px;
+  margin-bottom: 10px;
   background: rgba(255, 216, 118, 0.2899999917);
 }
 @media screen and (max-width: 441px) {
@@ -385,5 +386,16 @@
 @media screen and (max-width: 1119px) {
   .nd-breadcrumb {
     margin-left: initial;
+  }
+}
+
+.nd-rating-popup {
+  right: -15px !important;
+  top: 92px !important;
+}
+@media screen and (max-width: 1039px) {
+  .nd-rating-popup {
+    right: 0 !important;
+    top: 137px !important;
   }
 }
