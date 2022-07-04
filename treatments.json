@@ -943,8 +943,8 @@
             },
             {
                 "operator": "edit",
-                "type": "styleApplicator",
-                "value": "{\"border-bottom\":\"1px solid #efefef\"}",
+                "type": "addClass",
+                "value": "nd-product-title",
                 "selector": ".full-width.sticky_header"
             },
             {
