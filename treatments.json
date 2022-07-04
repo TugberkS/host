@@ -1063,7 +1063,7 @@
         "category":"Universal Best Practice UX Strategies / Product Pages (PDP) / Web",
         "device":"desktop",
         "apply_on_user_segment":"*",
-        "reapply_event":"infinite_scroll",
+        "reapply_event":"on_scroll",
         "baseRuleSet":[
            {
               "id":1,
