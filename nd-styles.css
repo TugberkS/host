@@ -399,3 +399,12 @@
     top: 137px !important;
   }
 }
+
+.nd-product-title {
+  display: block !important;
+  border-bottom: 1px solid #efefef;
+  position: unset !important;
+  top: unset !important;
+  bottom: unset !important;
+  width: unset !important;
+}
