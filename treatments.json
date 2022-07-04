@@ -827,7 +827,6 @@
            }
         ]
      },
-
     {
         "id": 13,
         "name": "Money Back Guarantee Banner",
@@ -848,7 +847,7 @@
             {
                 "operator": "insert",
                 "type": "before",
-                "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndvivense.glov.ai/assets/money_back.png\" style=\"width:36px; height:24px;\"/><div style=\"margin-left: 8px\">3 GÜN İÇİNDE KOŞULSUZ VIVENSE PARA IADE GARANTISI</div></div></div></div>",
+                "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndvivense.glov.ai/assets/money_back.png\" style=\"width:36px; height:24px;\"/><div style=\"margin-left: 8px\">3 GÜN İÇİNDE KOŞULSUZ PARA IADE GARANTISI</div></div></div></div>",
                 "selector": "#address-section",
                 "selectorFallback": "#order-cart-addreslist"
             }
