@@ -826,5 +826,32 @@
               "selector":"#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar > div:nth-child(2)"
            }
         ]
-     }
+     },
+
+    {
+        "id": 13,
+        "name": "Money Back Guarantee Banner",
+        "description": "Money back guarantee banner",
+        "category": "Universal Best Practice UX Strategies / Checkout Page / Web, Web Mobile",
+        "apply_on_user_segment": "*",
+        "device": "*",
+        "baseRuleSet": [
+            {
+                "id": 1,
+                "type": "url",
+                "operator": "path",
+                "condition": "equal",
+                "value": "/adres-listesi.html"
+            }
+        ],
+        "actions": [
+            {
+                "operator": "insert",
+                "type": "before",
+                "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndvivense.glov.ai/assets/money_back.png\" style=\"width:36px; height:24px;\"/><div style=\"margin-left: 8px\">3 GÜN İÇİNDE KOŞULSUZ VIVENSE PARA IADE GARANTISI</div></div></div></div>",
+                "selector": "#address-section",
+                "selectorFallback": "#order-cart-addreslist"
+            }
+        ]
+    }
 ]
