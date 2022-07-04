@@ -1055,5 +1055,36 @@
               ]
            }
         ]
+     },
+    {
+        "id":12,
+        "name":"Photo Enlarging Extras",
+        "description":"Desktop photo enlargement sticky header fix",
+        "category":"Universal Best Practice UX Strategies / Product Pages (PDP) / Web",
+        "device":"desktop",
+        "apply_on_user_segment":"*",
+        "reapply_event":"infinite_scroll",
+        "baseRuleSet":[
+           {
+              "id":1,
+              "type":"dataLayer",
+              "operator":"PageType",
+              "condition":"equal",
+              "value":"Productpage"
+           },
+           {
+              "type":"element",
+              "operator":"classList",
+              "condition":"notContains",
+              "value": "panel-body",
+              "selector":"#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar > div:nth-child(2)"
+           }
+        ],
+        "actions":[
+           {
+              "operator":"remove",
+              "selector":"#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar > div:nth-child(2)"
+           }
+        ]
      }
 ]
