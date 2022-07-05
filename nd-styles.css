@@ -409,6 +409,9 @@
   width: unset !important;
 }
 
+.nd-photo-enlarging {
+  padding: 0 !important;
+}
 @media screen and (min-width: 1320px) {
   .nd-photo-enlarging {
     width: 1320px;
