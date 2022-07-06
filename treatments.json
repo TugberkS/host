@@ -837,5 +837,32 @@
               "selector":"#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar > div:nth-child(2)"
            }
         ]
+     },
+    {
+        "id":13,
+        "name":"Desktop infinite scroll",
+        "description":"Enable inifite scroll on desktop",
+        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Web",
+        "device":"desktop",
+        "apply_on_user_segment":"*",
+        "baseRuleSet":[
+           {
+              "id":1,
+              "type":"dataLayer",
+              "operator":"PageType",
+              "condition":"equal",
+              "value":"Listingpage"
+           }
+        ],
+        "actions":[
+           {
+              "operator":"remove",
+              "selector":"pagination_wrapper"
+           },
+           {
+            "operator":"injectscript",
+            "value": "  let ajaxPage = 2;setInterval(() => {if (document.documentElement.scrollTop / document.documentElement.offsetHeight > 0.8) {const url = new URL(window.location.href);const origin = url.origin;const pathname = url.pathname;fetchURL = `${origin}/ajax/mobile-search/loadOtherPages.php?originalPath=${pathname}&ref=menu_header&page=${ajaxPage}`;const res = fetch(fetchURL);res.then((res) => {res.json().then((resJson) => {$(\".product-list\").append(resJson.html);ajaxPage++;});});if (typeof categoryListJS === \"function\") {setTimeout(() => {console.log(\"calling categoryListJS\");categoryListJS();}, 500);} else console.log(\"categoryListJS not defined\");}}, 250);"
+           }
+        ]
      }
 ]
