@@ -857,10 +857,11 @@
         "actions":[
            {
               "operator":"remove",
-              "selector":"pagination_wrapper"
+              "selector":".pagination_wrapper"
            },
            {
             "operator":"injectscript",
+            "selector":"body",
             "value": "  let ajaxPage = 2;setInterval(() => {if (document.documentElement.scrollTop / document.documentElement.offsetHeight > 0.8) {const url = new URL(window.location.href);const origin = url.origin;const pathname = url.pathname;fetchURL = `${origin}/ajax/mobile-search/loadOtherPages.php?originalPath=${pathname}&ref=menu_header&page=${ajaxPage}`;const res = fetch(fetchURL);res.then((res) => {res.json().then((resJson) => {$(\".product-list\").append(resJson.html);ajaxPage++;});});if (typeof categoryListJS === \"function\") {setTimeout(() => {console.log(\"calling categoryListJS\");categoryListJS();}, 500);} else console.log(\"categoryListJS not defined\");}}, 250);"
            }
         ]
