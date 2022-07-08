@@ -537,7 +537,7 @@
         "description": "Desktop Photo Enlargement",
         "category": "Universal Best Practice UX Strategies / Product Pages (PDP) / Web",
         "apply_on_user_segment": "*",
-        "reapply_event": "['element_change', 'timeout']",
+        "reapply_event": ["element_change", "timeout"],
         "reapply_selector": "div.shortcut_column.basket_wrapper.my-cart",
         "device": "desktop",
         "baseRuleSet": [
