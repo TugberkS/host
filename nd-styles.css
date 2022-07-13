@@ -436,6 +436,11 @@
     width: calc((100% - 30px) / 3) !important;
   }
 }
+@media screen and (max-width: 1079px) {
+  .nd-product-item {
+    width: unset;
+  }
+}
 .nd-product-item:nth-of-type(4n) {
   margin-right: 20px !important;
 }
@@ -444,6 +449,16 @@
     margin-right: 15px !important;
   }
 }
+@media screen and (max-width: 1079px) {
+  .nd-product-item:nth-of-type(4n) {
+    margin-right: unset;
+  }
+}
 .nd-product-item:nth-of-type(3n) {
   margin-right: 0 !important;
+}
+@media screen and (max-width: 1079px) {
+  .nd-product-item:nth-of-type(3n) {
+    margin-right: unset;
+  }
 }
