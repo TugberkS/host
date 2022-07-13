@@ -438,7 +438,7 @@
 }
 @media screen and (max-width: 1079px) {
   .nd-product-item {
-    width: unset;
+    width: unset !important;
   }
 }
 .nd-product-item:nth-of-type(4n) {
@@ -451,7 +451,7 @@
 }
 @media screen and (max-width: 1079px) {
   .nd-product-item:nth-of-type(4n) {
-    margin-right: unset;
+    margin-right: unset !important;
   }
 }
 .nd-product-item:nth-of-type(3n) {
@@ -459,6 +459,6 @@
 }
 @media screen and (max-width: 1079px) {
   .nd-product-item:nth-of-type(3n) {
-    margin-right: unset;
+    margin-right: unset !important;
   }
 }
