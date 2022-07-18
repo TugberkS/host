@@ -900,6 +900,7 @@
         "description":"Change PLP layout from 4 columns to 3 columns",
         "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Web",
         "device":"desktop",
+        "reapply_event": "infinite_scroll",
         "apply_on_user_segment":"*",
         "baseRuleSet":[
            {
@@ -918,5 +919,31 @@
               "selector":".product-card"
            }
         ]
-     }
+    },
+    {
+        "id":16,
+        "name":"Super Price badge update",
+        "description":"Insert or delete super price badge depending on info from lookup api",
+        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Web, Mobile Web",
+        "device":"*",
+        "apply_on_user_segment":"*",
+        "baseRuleSet":[
+           {
+              "id":1,
+              "type":"dataLayer",
+              "operator":"PageType",
+              "condition":"equal",
+              "value":"Listingpage"
+           }
+        ],
+        "actions":[
+           {
+              "operator":"edit",
+              "type": "updateBadge",
+              "value": "superPrice",
+              "badgeSelector": ".top-left-badge",
+              "selector":".product-card"
+           }
+        ]
+    }
 ]
