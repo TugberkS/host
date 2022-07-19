@@ -718,6 +718,7 @@
         "apply_on_user_segment":"*",
         "reapply_event":"element_change",
         "reapply_selector":"td.sumprice-com",
+        "dependant_on_treatment": 7,
         "baseRuleSet":[
            {
               "id":1,
@@ -817,6 +818,7 @@
         "device":"desktop",
         "apply_on_user_segment":"*",
         "reapply_event":"on_scroll",
+        "dependant_on_treatment": 7,
         "baseRuleSet":[
            {
               "id":1,
@@ -919,31 +921,5 @@
               "selector":".product-card"
            }
         ]
-    },
-    {
-        "id":16,
-        "name":"Super Price badge update",
-        "description":"Insert or delete super price badge depending on info from lookup api",
-        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Web, Mobile Web",
-        "device":"*",
-        "apply_on_user_segment":"*",
-        "baseRuleSet":[
-           {
-              "id":1,
-              "type":"dataLayer",
-              "operator":"PageType",
-              "condition":"equal",
-              "value":"Listingpage"
-           }
-        ],
-        "actions":[
-           {
-              "operator":"edit",
-              "type": "updateBadge",
-              "value": "superPrice",
-              "badgeSelector": ".top-left-badge",
-              "selector":".product-card"
-           }
-        ]
-    }
+     }
 ]
