@@ -275,6 +275,7 @@
         "reapply_event": "element_change",
         "reapply_selector": ["div.shortcut_column.basket_wrapper.my-cart", "span.price", "span.new-price"],
         "device": "desktop",
+        "dependant_on_treatment": 3,
         "baseRuleSet":[
             {
                 "id": 1,
@@ -406,6 +407,7 @@
         "reapply_event": "element_change",
         "reapply_selector": [".basket_icon.my-cart-mobile", "#sales-price"],
         "device": "mobile",
+        "dependant_on_treatment": 4,
         "baseRuleSet":[
             {
                 "id": 1,
@@ -862,7 +864,7 @@
             {
                 "operator": "insert",
                 "type": "before",
-                "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndvivense.glov.ai/assets/money_back.png\" style=\"width:36px; height:24px;\"/><div style=\"margin-left: 8px\">3 GÜN İÇİNDE KOŞULSUZ PARA IADE GARANTISI</div></div></div></div>",
+                "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndvivense.glov.ai/assets/money_back.png\" style=\"width:36px; height:24px;\"/><div style=\"margin-left: 8px\">3 GÜN İÇİNDE KOŞULSUZ PARA İADE GARANTİSİ</div></div></div></div>",
                 "selector": "#address-section",
                 "selectorFallback": "#order-cart-addreslist"
             }
@@ -892,7 +894,7 @@
            {
             "operator":"injectscript",
             "selector":"body",
-            "value": "  let ajaxPage = 2;setInterval(() => {if (document.documentElement.scrollTop / document.documentElement.offsetHeight > 0.8) {const url = new URL(window.location.href);const origin = url.origin;const pathname = url.pathname;fetchURL = `${origin}/ajax/mobile-search/loadOtherPages.php?originalPath=${pathname}&ref=menu_header&page=${ajaxPage}`;const res = fetch(fetchURL);res.then((res) => {res.json().then((resJson) => {$(\".product-list\").append(resJson.html);ajaxPage++;});});if (typeof categoryListJS === \"function\") {setTimeout(() => {console.log(\"calling categoryListJS\");categoryListJS();}, 500);} else console.log(\"categoryListJS not defined\");}}, 250);"
+            "value": "let ajaxPage = 2;setInterval(() => {if (document.documentElement.scrollTop / document.documentElement.offsetHeight > 0.7) {const url = new URL(window.location.href);const origin = url.origin;const pathname = url.pathname;fetchURL = `${origin}/ajax/mobile-search/loadOtherPages.php?originalPath=${pathname}&ref=menu_header&page=${ajaxPage}`;const res = fetch(fetchURL);res.then((res) => {res.json().then((resJson) => {$(\".product-list\").append(resJson.html);ajaxPage++;});});if (typeof categoryListJS === \"function\") {setTimeout(() => {categoryListJS();}, 750);} else console.log(\"categoryListJS not defined\");window.sessionStorage.setItem(\"ND_scrollTo\", document.documentElement.scrollTop)}}, 750);const navType = performance.getEntriesByType(\"navigation\")[0].type;if (navType === \"back_forward\") {if (window.sessionStorage.getItem(\"ND_scrollTo\")) {const scrollInterval = setInterval(() => {const scrollToLocation = parseInt(window.sessionStorage.getItem(\"ND_scrollTo\"));window.scroll(0, scrollToLocation);if (document.documentElement.scrollTop >= scrollToLocation) {clearInterval(scrollInterval);window.sessionStorage.removeItem(\"ND_scrollTo\");}}, 200)}}"
            }
         ]
     },
