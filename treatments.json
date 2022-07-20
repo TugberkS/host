@@ -848,7 +848,7 @@
         "id": 13,
         "name": "Money Back Guarantee Banner",
         "description": "Money back guarantee banner",
-        "category": "Universal Best Practice UX Strategies / Checkout Page / Web, Web Mobile",
+        "category": "Universal Best Practice UX Strategies / Checkout Page / Web, Mobile Web",
         "apply_on_user_segment": "*",
         "device": "*",
         "baseRuleSet": [
@@ -921,6 +921,68 @@
               "type": "addClass",
               "value": "nd-product-item",
               "selector":".product-card"
+           }
+        ]
+     },
+    {
+        "id":16,
+        "name":"CTA Button Text Optimization",
+        "description":"CTA Button Text Optimization",
+        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Web, Mobile Web",
+        "device":"*",
+        "reapply_event": "element_change",
+        "reapply_selector": ".btn.cart-confirm.btn-lg",
+        "apply_on_user_segment":"*",
+        "subVariantRuleSet":[
+            {
+                "id": 1,
+                "type": "url",
+                "operator": "path",
+                "condition": "equal",
+                "value": "/siparis-listesi.html",
+                "subVariantId": 1
+            },
+            {
+                "id": 2,
+                "type": "url",
+                "operator": "path",
+                "condition": "equal",
+                "value": "/adres-listesi.html",
+                "subVariantId": 2
+            },
+            {
+                "id": 3,
+                "type": "url",
+                "operator": "path",
+                "condition": "equal",
+                "value": "/odeme.html",
+                "subVariantId": 3
+            }
+        ],
+        "actions":[
+           {
+              "operator":"edit",
+              "type": "text",
+              "subVariants": [
+                {
+                    "id": 1,
+                    "value": "Devam Et",
+                    "selector": "#checkoutForm > div > div > div.col-md-4.cart-right-container > div.cart-footer > span > button",
+                    "selectorFallback": "#checkoutForm > div.padding-reset.main-basket-summary > div.row.sticky-panel > div.col-xs-12.approve-basket > button"
+                },
+                {
+                    "id": 2,
+                    "value": "Devam Et",
+                    "selector": ".btn.cart-confirm.btn-lg",
+                    "selectorFallback": "#order-cart-addreslist > div.cart-approve-btn > button > span:nth-child(2)"
+                },
+                {
+                    "id": 3,
+                    "value": "Alışverişi Tamamla",
+                    "selector": ".btn.cart-confirm.btn-lg",
+                    "selectorFallback": "#accept-pay"
+                }
+              ]
            }
         ]
      }
