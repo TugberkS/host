@@ -967,7 +967,7 @@
                 {
                     "id": 1,
                     "value": "Devam Et",
-                    "selector": "#checkoutForm > div > div > div.col-md-4.cart-right-container > div.cart-footer > span > button",
+                    "selector": ".btn.cart-confirm.btn-lg",
                     "selectorFallback": "#checkoutForm > div.padding-reset.main-basket-summary > div.row.sticky-panel > div.col-xs-12.approve-basket > button"
                 },
                 {
