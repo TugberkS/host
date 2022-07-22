@@ -250,7 +250,13 @@
 }
 
 #wowslider-container1 .ws_thumbs.next-day-thumb div {
-  width: 200em;
+  width: 100em;
+  padding-top: 0;
+  flex-direction: initial;
+}
+
+#wowslider-container1 .ws_thumbs.next-day-thumb__max-content div {
+  width: max-content;
   padding-top: 0;
   flex-direction: initial;
 }
