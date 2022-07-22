@@ -554,6 +554,7 @@
                 "id": 1,
                 "type": "element",
                 "operator": "count",
+                "selectorAll": "#wowslider-container1 > div.ws_thumbs.next-day-thumb > div a",
                 "condition": "greaterThan",
                 "value": 8
             }
