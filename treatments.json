@@ -275,6 +275,7 @@
         "reapply_event": "element_change",
         "reapply_selector": ["div.shortcut_column.basket_wrapper.my-cart", "span.price", "span.new-price"],
         "device": "desktop",
+        "dependant_on_treatment": 3,
         "baseRuleSet":[
             {
                 "id": 1,
@@ -406,6 +407,7 @@
         "reapply_event": "element_change",
         "reapply_selector": [".basket_icon.my-cart-mobile", "#sales-price"],
         "device": "mobile",
+        "dependant_on_treatment": 4,
         "baseRuleSet":[
             {
                 "id": 1,
@@ -556,7 +558,8 @@
                 "operator": "count",
                 "selectorAll": "#wowslider-container1 > div.ws_thumbs.next-day-thumb > div a",
                 "condition": "greaterThan",
-                "value": 8
+                "value": 8,
+                "subVariantId": 1
             }
         ],
         "actions": [
@@ -734,6 +737,7 @@
         "apply_on_user_segment":"*",
         "reapply_event":"element_change",
         "reapply_selector":"td.sumprice-com",
+        "dependant_on_treatment": 7,
         "baseRuleSet":[
            {
               "id":1,
@@ -833,6 +837,7 @@
         "device":"desktop",
         "apply_on_user_segment":"*",
         "reapply_event":"on_scroll",
+        "dependant_on_treatment": 7,
         "baseRuleSet":[
            {
               "id":1,
@@ -853,6 +858,203 @@
            {
               "operator":"remove",
               "selector":"#sidebar-right > div > div.sticky_column > div.panel.panel-default.product-right-sidebar > div:nth-child(2)"
+           }
+        ]
+     },
+    {
+        "id": 13,
+        "name": "Money Back Guarantee Banner",
+        "description": "Money back guarantee banner",
+        "category": "Universal Best Practice UX Strategies / Checkout Page / Web, Mobile Web",
+        "apply_on_user_segment": "*",
+        "device": "*",
+        "baseRuleSet": [
+            {
+                "id": 1,
+                "type": "url",
+                "operator": "path",
+                "condition": "equal",
+                "value": "/adres-listesi.html"
+            }
+        ],
+        "actions": [
+            {
+                "operator": "insert",
+                "type": "before",
+                "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndvivense.glov.ai/assets/money_back.png\" style=\"width:36px; height:24px;\"/><div style=\"margin-left: 8px\">3 GÜN İÇİNDE KOŞULSUZ PARA İADE GARANTİSİ</div></div></div></div>",
+                "selector": "#address-section",
+                "selectorFallback": "#order-cart-addreslist"
+            }
+        ]
+    },
+    {
+        "id":14,
+        "name":"Desktop infinite scroll",
+        "description":"Enable inifite scroll on desktop",
+        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Web",
+        "device":"desktop",
+        "apply_on_user_segment":"*",
+        "baseRuleSet":[
+           {
+              "id":1,
+              "type":"dataLayer",
+              "operator":"PageType",
+              "condition":"equal",
+              "value":"Listingpage"
+           }
+        ],
+        "actions":[
+           {
+              "operator":"remove",
+              "selector":".pagination_wrapper"
+           },
+           {
+            "operator":"injectscript",
+            "selector":"body",
+            "value": "let ajaxPage = 2;const scrollPage = parseInt(window.sessionStorage.getItem(\"ND_scrollPage\"));const url = new URL(window.location.href);const origin = url.origin;const pathname = url.pathname;const pageLoader = (page) => {  const fetchURL = `${origin}/ajax/mobile-search/loadOtherPages.php?originalPath=${pathname}&ref=menu_header&page=${page}`;  const res = fetch(fetchURL);  res.then((res) => {    res.json().then((resJson) => {      $(\".product-list\").append(resJson.html);    });  });};const productsInitialize = () => {  setTimeout(() => {    if (typeof categoryListJS === \"function\") categoryListJS();    else console.warn(\"Nextday: categoryListJS not defined\");  }, 750);};const navType = performance.getEntriesByType(\"navigation\")[0].type;if (navType === \"back_forward\") {    if (scrollPage) {    for (let i = 2; i <= scrollPage; i++) {      pageLoader(i);    }    productsInitialize();    ajaxPage = scrollPage + 1;  }} else window.sessionStorage.removeItem(\"ND_scrollPage\");setInterval(() => {  if (document.documentElement.scrollTop / document.documentElement.offsetHeight > 0.75) {    pageLoader(ajaxPage);    productsInitialize();    window.sessionStorage.setItem(\"ND_scrollPage\", ajaxPage);    ajaxPage++;  }}, 750);"
+           }
+        ]
+    },
+    {
+        "id":15,
+        "name":"Desktop PLP layout",
+        "description":"Change PLP layout from 4 columns to 3 columns",
+        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Web",
+        "device":"desktop",
+        "reapply_event": "infinite_scroll",
+        "apply_on_user_segment":"*",
+        "baseRuleSet":[
+           {
+              "id":1,
+              "type":"dataLayer",
+              "operator":"PageType",
+              "condition":"equal",
+              "value":"Listingpage"
+           }
+        ],
+        "actions":[
+           {
+              "operator":"edit",
+              "type": "addClass",
+              "value": "nd-product-item",
+              "selector":".product-card"
+           }
+        ]
+     },
+    {
+        "id":16,
+        "name":"CTA Button Text Optimization",
+        "description":"CTA Button Text Optimization",
+        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Web, Mobile Web",
+        "device":"*",
+        "reapply_event": "element_change",
+        "reapply_selector": ".btn.cart-confirm.btn-lg",
+        "apply_on_user_segment":"*",
+        "subVariantRuleSet":[
+            {
+                "id": 1,
+                "type": "url",
+                "operator": "path",
+                "condition": "equal",
+                "value": "/siparis-listesi.html",
+                "subVariantId": 1
+            },
+            {
+                "id": 2,
+                "type": "url",
+                "operator": "path",
+                "condition": "equal",
+                "value": "/adres-listesi.html",
+                "subVariantId": 2
+            },
+            {
+                "id": 3,
+                "type": "url",
+                "operator": "path",
+                "condition": "equal",
+                "value": "/odeme.html",
+                "subVariantId": 3
+            }
+        ],
+        "actions":[
+           {
+              "operator":"edit",
+              "type": "text",
+              "subVariants": [
+                {
+                    "id": 1,
+                    "value": "DEVAM ET",
+                    "selector": ".btn.cart-confirm.btn-lg",
+                    "selectorFallback": "#checkoutForm > div.padding-reset.main-basket-summary > div.row.sticky-panel > div.col-xs-12.approve-basket > button"
+                },
+                {
+                    "id": 2,
+                    "value": "DEVAM ET",
+                    "selector": ".btn.cart-confirm.btn-lg",
+                    "selectorFallback": "#order-cart-addreslist > div.cart-approve-btn > button > span:nth-child(2)"
+                },
+                {
+                    "id": 3,
+                    "value": "ALIŞVERİŞİ TAMAMLA",
+                    "selector": ".btn.cart-confirm.btn-lg",
+                    "selectorFallback": "#accept-pay"
+                }
+              ]
+           }
+        ]
+     },
+    {
+        "id":17,
+        "name":"Remove 'Destek' icon from PDP",
+        "description":"Remove 'Destek' icon from PDP",
+        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Mobile Web",
+        "device":"mobile",
+        "reapply_event": "timeout",
+        "apply_on_user_segment":"*",
+        "baseRuleSet":[
+            {
+                "id": 1,
+                "type": "dataLayer",
+                "operator": "PageType",
+                "condition": "equal",
+                "value": "Productpage"
+            }
+        ],
+        "actions":[
+           {
+              "operator":"remove",
+              "selector": "body > div:nth-child(63)"
+           }
+        ]
+     },
+    {
+        "id":18,
+        "name":"PLP - Swipeable Product Images - MOBILE",
+        "description":"PLP - Swipeable Product Images - MOBILE",
+        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Mobile Web",
+        "device":"mobile",
+        "reapply_event": "infinite_scroll",
+        "apply_on_user_segment":"*",
+        "baseRuleSet":[
+            {
+                "id": 1,
+                "type": "dataLayer",
+                "operator": "PageType",
+                "condition": "equal",
+                "value": "Listingpage"
+            }
+        ],
+        "actions":[
+           {
+                "operator":"injectscript",
+                "selector":"body",
+                "value": "let touchstartX = 0;$(\".product_img\").on(\"touchstart\", function (e) {touchstartX = e.originalEvent.touches[0].clientX;$(this).find(\".bullets_wrapper\").css(\"display\", \"block\")});$(\".product_img\").on(\"touchend\", function (e) {const touchendX = e.originalEvent.changedTouches[0].clientX;let currentImg = $(this).find(\".active-img.main_image\").attr(\"src\");const allImages = Array.from($(this).find(\".hover-product-image\"));for (let i = 0; i < allImages.length; i++) {const image = allImages[i];if (image.getAttribute(\"data-original\") === currentImg) {let newIndex = i + 1;if (touchendX > touchstartX) {newIndex = i - 1;}if (newIndex === allImages.length) newIndex = 0;if (newIndex < 0) newIndex = allImages.length - 1;currentImg = allImages[newIndex].getAttribute(\"data-original\");$(this).find(\".active-img.main_image\").attr(\"src\", currentImg);break;}}$(this).find(\".bullets_wrapper\").css(\"display\", \"none\")});"
+           },
+           {
+                "operator":"edit",
+                "type": "styleApplicator", 
+                "selector":".product_img",
+                "value": "{\"touch-action\":\"none\"}"
            }
         ]
      }
