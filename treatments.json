@@ -877,13 +877,29 @@
                 "value": "/adres-listesi.html"
             }
         ],
+        "subVariantRuleSet": [
+            {
+                "id": 1,
+                "type": "environment",
+                "operator": "device_type",
+                "condition": "equal",
+                "value": "mobile",
+                "subVariantId": 1
+            }
+        ],
         "actions": [
             {
                 "operator": "insert",
                 "type": "before",
                 "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndvivense.glov.ai/assets/money_back.png\" style=\"width:36px; height:24px;\"/><div style=\"margin-left: 8px\">3 GÜN İÇİNDE KOŞULSUZ PARA İADE GARANTİSİ</div></div></div></div>",
                 "selector": "#address-section",
-                "selectorFallback": "#order-cart-addreslist"
+                "selectorFallback": "#order-cart-addreslist",
+                "subVariants": [
+                    {
+                        "id": 1,
+                        "value": "<div class=\"nd-money-back__wrapper\"><div class=\"nd-money-back\"><div class=\"nd-money-back__body\"><img src=\"https://ndvivense.glov.ai/assets/money_back.png\" style=\"width:36px; height:24px;\"/><div style=\"margin-left: 8px\">3 GÜN İÇİNDE PARA İADE GARANTİSİ</div></div></div></div>"
+                    }
+                ]
             }
         ]
     },
@@ -911,7 +927,7 @@
            {
             "operator":"injectscript",
             "selector":"body",
-            "value": "let ajaxPage = 2;const scrollPage = parseInt(window.sessionStorage.getItem(\"ND_scrollPage\"));const url = new URL(window.location.href);const origin = url.origin;const pathname = url.pathname;const pageLoader = (page) => {  const fetchURL = `${origin}/ajax/mobile-search/loadOtherPages.php?originalPath=${pathname}&ref=menu_header&page=${page}`;  const res = fetch(fetchURL);  res.then((res) => {    res.json().then((resJson) => {      $(\".product-list\").append(resJson.html);    });  });};const productsInitialize = () => {  setTimeout(() => {    if (typeof categoryListJS === \"function\") categoryListJS();    else console.warn(\"Nextday: categoryListJS not defined\");  }, 750);};const navType = performance.getEntriesByType(\"navigation\")[0].type;if (navType === \"back_forward\") {    if (scrollPage) {    for (let i = 2; i <= scrollPage; i++) {      pageLoader(i);    }    productsInitialize();    ajaxPage = scrollPage + 1;  }} else window.sessionStorage.removeItem(\"ND_scrollPage\");setInterval(() => {  if (document.documentElement.scrollTop / document.documentElement.offsetHeight > 0.75) {    pageLoader(ajaxPage);    productsInitialize();    window.sessionStorage.setItem(\"ND_scrollPage\", ajaxPage);    ajaxPage++;  }}, 750);"
+            "value": "function track(fn, handler, before) {  return function interceptor() {    if (before) {      handler.apply(this, arguments);      return fn.apply(this, arguments);    } else {      var result = fn.apply(this, arguments);      handler.apply(this, arguments);      return result;    }  }};var oldQs = location.search;function handler() {  url = new URL(window.location.href);  origin = url.origin;  pathname = url.pathname;  search = url.search.substr(1);  window.sessionStorage.removeItem(\"ND_scrollPage\");  ajaxPage = 2;  oldQs = location.search;  $('.pagination_wrapper').remove();};history.pushState = track(history.pushState, handler);history.replaceState = track(history.replaceState, handler);window.addEventListener('popstate', handler);let ajaxPage = 2;const scrollPage = parseInt(window.sessionStorage.getItem(\"ND_scrollPage\"));let url = new URL(window.location.href);let origin = url.origin;let pathname = url.pathname;let search = url.search.substr(1);const pageLoader = async (page) => {  const fetchURL = `${origin}/ajax/mobile-search/loadOtherPages.php?originalPath=${pathname}&${search}&page=${page}`;  const res = await fetch(fetchURL);  if (!res.ok) return false;  const resJson = await res.json();  if (!resJson.html || resJson.html === \"\") return false;  $(\".product-list\").append(resJson.html);  return true;};const productsInitialize = () => {  setTimeout(() => {    if (typeof window.viveCategoryPage.lazyLoadImages === \"function\") window.viveCategoryPage.lazyLoadImages();    else console.warn(\"Nextday: window.viveCategoryPage.lazyLoadImages not defined\");    if (typeof window.viveCategoryPage.imageHover === \"function\") window.viveCategoryPage.imageHover();    else console.warn(\"Nextday: window.viveCategoryPage.imageHover not defined\");    if (typeof Vivense.favoriteActions.init === \"function\") Vivense.favoriteActions.init();    else console.warn(\"Nextday: favoriteActions.init not defined\");  }, 750);};const navType = performance.getEntriesByType(\"navigation\")[0].type;if (navType === \"back_forward\") {  if (scrollPage) {    for (let i = 2; i <= scrollPage; i++) {      pageLoader(i);    }    productsInitialize();    ajaxPage = scrollPage + 1;  }} else window.sessionStorage.removeItem(\"ND_scrollPage\");let pageLoadStatus = true;setInterval(async () => {  if (pageLoadStatus && document.documentElement.scrollTop / document.documentElement.offsetHeight > 0.75) {    pageLoadStatus = await pageLoader(ajaxPage);    if (pageLoadStatus) {      productsInitialize();      window.sessionStorage.setItem(\"ND_scrollPage\", ajaxPage);      ajaxPage++;    }  }}, 750);"
            }
         ]
     },
@@ -1048,8 +1064,40 @@
            {
                 "operator":"injectscript",
                 "selector":"body",
-                "value": "let touchstartX = 0;function touchStartFn(e) {  touchstartX = e.originalEvent.touches[0].clientX;};function touchMoveFn(e) {  console.log($(this));  if (e.cancelable) {    const touchMoveX = e.originalEvent.changedTouches[0].clientX;    if (touchstartX - 10 > touchMoveX || touchstartX + 10 < touchMoveX) {      e.preventDefault();      e.stopPropagation();      $(this).find(\".bullets_wrapper\").css(\"display\", \"block\");    }  }};function touchEndFn(e) {  if (e.cancelable) {    e.preventDefault();    e.stopPropagation();    const touchendX = e.originalEvent.changedTouches[0].clientX;    let currentImg = $(this).find(\".active-img.main_image\").attr(\"src\");    const allImages = Array.from($(this).find(\".hover-product-image\"));    for (let i = 0; i < allImages.length; i++) {      const image = allImages[i];      if (image.getAttribute(\"data-original\") === currentImg) {        let newIndex = i + 1;        if (touchendX > touchstartX) {          newIndex = i - 1;        }        if (newIndex >= allImages.length) {          newIndex = 0;        }        if (newIndex < 0) {          newIndex = allImages.length - 1;        }        currentImg = allImages[newIndex].getAttribute(\"data-original\");        $(this).find(\".active-img.main_image\").attr(\"src\", currentImg);        break;      }    }  }  $(this).find(\".bullets_wrapper\").css(\"display\", \"none\");};$(\".product_img\").on(\"touchstart\", touchStartFn);$(\".product_img\").on(\"touchmove\", touchMoveFn);$(\".product_img\").on(\"touchend\", touchEndFn);"
+                "value": "let touchstartX = 0;$(\".product_img\").on(\"touchstart\", function (e) {touchstartX = e.originalEvent.touches[0].clientX;$(this).find(\".bullets_wrapper\").css(\"display\", \"block\")});$(\".product_img\").on(\"touchend\", function (e) {const touchendX = e.originalEvent.changedTouches[0].clientX;let currentImg = $(this).find(\".active-img.main_image\").attr(\"src\");const allImages = Array.from($(this).find(\".hover-product-image\"));for (let i = 0; i < allImages.length; i++) {const image = allImages[i];if (image.getAttribute(\"data-original\") === currentImg) {let newIndex = i + 1;if (touchendX > touchstartX) {newIndex = i - 1;}if (newIndex === allImages.length) newIndex = 0;if (newIndex < 0) newIndex = allImages.length - 1;currentImg = allImages[newIndex].getAttribute(\"data-original\");$(this).find(\".active-img.main_image\").attr(\"src\", currentImg);break;}}$(this).find(\".bullets_wrapper\").css(\"display\", \"none\")});"
+           },
+           {
+                "operator":"edit",
+                "type": "styleApplicator", 
+                "selector":".product_img",
+                "value": "{\"touch-action\":\"none\"}"
            }
         ]
-     }
+     },
+     {
+        "id":19,
+        "name":"Super Price badge update",
+        "description":"Insert or delete super price badge depending on info from lookup api",
+        "category":"Universal Best Practice UX Strategies / Category Pages (PLP) / Web, Mobile Web",
+        "device":"*",
+        "apply_on_user_segment":"*",
+        "baseRuleSet":[
+           {
+              "id":1,
+              "type":"dataLayer",
+              "operator":"PageType",
+              "condition":"equal",
+              "value":"Listingpage"
+           }
+        ],
+        "actions":[
+           {
+              "operator":"edit",
+              "type": "updateBadge",
+              "value": "superPrice",
+              "badgeSelector": ".top-left-badge",
+              "selector":".product-card"
+           }
+        ]
+    }
 ]
